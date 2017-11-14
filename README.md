@@ -111,7 +111,7 @@ case, it is recommended to take a look to the following topics:
 
 Each day of the first week you will have a small exercise at the end of the day.
 You must code the exercise inside the corresponding folder, example
-src/week1/day1/index.js will contain the code for the exercise of the Day 1.
+`src/week1/day1/index.js` will contain the code for the exercise of the Day 1.
 
 The second week introduces you to TypeScript and Angular. JavaScript is an easy typed language, that means
 as a developer you have total control over the whole structure of the code. Sometimes that's
@@ -191,7 +191,7 @@ In this lesson you will learn all about the Prototype, Inheritance, Getters, Set
 
 ### Exercise:
 
-**Notes:**
+Look into [`src/week1/day1/index.html`](src/week1/day1/index.html) in there there's an `Animal` class with a talk method. Follow the instructions.
 
 ### ~~Not So~~ Optional Reading
 Since ES6 went out we do have a _Class like_ sintax, **HOWEVER** that's [Syntactic Sugar](https://en.wikipedia.org/wiki/Syntactic_sugar).
@@ -214,12 +214,11 @@ Read up and catch 'em all
 - [Errors and debugging](http://eloquentjavascript.net/08_error.html)
 
 ### Exercise:
-
-**Notes:**
+Look into [`src/week1/day2`](src/week1/day2) in there there're some `index` files, poke around and follow the instructions.
 
 ## Day 3: The browser, where the _magic_ happens
 
-So, you have a text file called _whatever.js_, you have ~200 lines in there (or you should, codebases of ~ 1k lines are made by horrible people). You double click the file, an browser opens and
+So, you have a text file called _whatever.js_, you have ~200 lines in there (or you should, codebases of ~ 1k lines are made by horrible people). You add it to an `index.html` file, double click that file, a browser opens and
 
 ![Mindblown](assets/mindblown.gif)
 
@@ -251,6 +250,7 @@ Users communicate with the application via `forms`, those are fill up sections w
 
 
 ### Exercise:
+Look into [`src/week1/day3`](src/week1/day3) in there there're some `index` files, poke around and follow the instructions.
 
 ## Day 4 and 5: require('Node.js')
 So, at this point you pretty much are up to speed with Js. But Js does not only run on a

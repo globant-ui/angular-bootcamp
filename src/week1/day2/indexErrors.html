@@ -1,0 +1,36 @@
+<!-- Take this file and open it on a browser, then open the console
+    inside developer tools -->
+<script>
+    (function(){
+        "use strict";
+        var willPass = "Hi there";
+        wontPass = "nope";
+
+        console.log(`willPass = ${willPass}`);
+        console.log(`wontPass = ${wontPass}`);
+
+        let someArr = [1, 2, 3, 4];
+
+        function giveMe(inx) {
+            return someArr[counter];
+        }
+
+        for (let counter= 0; counter <= someArr.length; counter++) {
+            console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+        }
+
+        console.log("The code continues");
+    })()
+</script>
+
+<!-- Now it's your turn to make some changes
+    - Refactor the previous code to make it work
+    - Add some kind of failsafe to never get an undefined while accessing the array
+    - Do an Assertion
+
+    ****************************************************
+    ****               BONUS POINTS                 ****
+    ****  Investigate about other console methods   ****
+    ****       and give me some kind of demo        ****
+    ****************************************************
+-->

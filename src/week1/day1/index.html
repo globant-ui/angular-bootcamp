@@ -1,0 +1,28 @@
+<!-- Take this file and open it on a browser, then open the console
+    inside developer tools -->
+<script>
+    var Animal = (function(type) {
+        this.type = type;
+    });
+
+    Animal.prototype.talk = function() {
+        console.log(`Hi, I'm an Animal, but also a ${this.type}`);
+    };
+
+    let rabbit = new Animal("Rabbit");
+    rabbit.talk();
+</script>
+
+<!-- Now it's your turn to make some changes
+    - Refactor the previous code to use getters and settters
+    - Add at least 2 more properties
+    - Add at least 2 more methods
+    - Create a new class that inherits from Animal
+    - Override one of the methods you previously defined
+
+    ****************************************************
+    ****               BONUS POINTS                 ****
+    ****      MAKE A 2nd VERSION USING ES6 CLASSES  ****
+    ****                                            ****
+    ****************************************************
+-->
