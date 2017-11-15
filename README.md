@@ -78,7 +78,7 @@ exercises as wanted.
 
 ### Materials
 
-1. You will need to install [Node.JS](https://nodejs.org/en/) (NVM is strongly recommended - [Unix](https://github.com/creationix/nvm#installation)/[Windows](https://github.com/coreybutler/nvm-windows))
+1. You will need to install [Node.JS](https://nodejs.org/en/) (Version 8) (NVM is strongly recommended - [Unix](https://github.com/creationix/nvm#installation)/[Windows](https://github.com/coreybutler/nvm-windows))
 
 2. The recommended IDE is [Visual Studio Code](https://code.visualstudio.com/). However, you can use any IDE of your preference.
 
@@ -280,8 +280,37 @@ Then you can go on with this
 - [How npm works?](https://docs.npmjs.com/how-npm-works/npm3)
 
 ### Exercise:
+Look into [`src/week1/day4-5`](src/week1/day4-5) in there there're some `js` files. Those 2 are Node.js apps, they don't work as you would expect from any other `.js` file.
+You will need to use the command line:
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui$
+```
+That's your Command Line Interface, know your CLI, love your CLI, **BE** your CLI. A developer is defined by it's tools, and you will want this one on your side.
+
+You'll need to navigate to `src/week1/day4-5`
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui$ cd src/week1/day4-5/
+```
+If you excecute a `ls` command you'll se the contents on the CLI
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui/src/week1/day4-5/$ ls
+
+expressDemo.js  fsDemo.js  node_modules  package.json
+
+```
+Then, you have to run one of the files
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui/src/week1/day4-5/$ node fsDemo.js
+```
+[**Remember, you'll need Node.js installed**](#materials)
+
+That will run the code, just remember two things
+1. Server code, like the one from [expressDemo](/src/week1/day4-5/expressDemo.js) keeps running, you have to exit it
+2. To exit a running process on the CLI, you need to press `CTRL+C`
 
 **Notes:**
+
+Don't be afraid to Google stuff, no developer remembers everything
 
 → [index](#index)
 
