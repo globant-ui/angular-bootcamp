@@ -1,4 +1,8 @@
-# JavaScript / Angular Bootcamp
+# JavaScript / Angular Bootcamp - 2018
+
+Welcome to the bootcamp, training time has begun
+
+![Workout](assets/workout.gif)
 
 Please, use this repository as a base for you training phase. The idea is to
 fork this project so everyone use the same folder structure for the
