@@ -1,7 +1,9 @@
 # JavaScript / Angular Bootcamp - 2018
 
+![Globant](assets/globant.jpg)
+
 ## IMPORTANT DISCLAIMER
-This is not your typical _crash course_, this is a Bootcamp.
+This is not your typical _crash course_, this is a **Bootcamp**.
 
 What does that mean?
 
