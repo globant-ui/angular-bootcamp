@@ -1,13 +1,30 @@
 # JavaScript / Angular Bootcamp - 2018
 
-Welcome to the bootcamp, training time has begun
+## IMPORTANT DISCLAIMER
+This is not your typical _crash course_, this is a Bootcamp.
+
+What does that mean?
+
+- _You will give your best_
+
+- _We will give our best_
+
+- _We will all have a good time_
+
+
+But most important, there will be **A LOT** of humor, because a happy developer _(student, pupil, padawan, you get the point...)_ is a great and hard working developer.
+
+
+_That said..._
+
+
+## Welcome to the bootcamp, training time has begun
 
 ![Workout](assets/workout.gif)
 
 Please, use this repository as a base for you training phase. The idea is to
 fork this project so everyone use the same folder structure for the
 exercises.
-
 
 #### Index
 
@@ -39,7 +56,7 @@ exercises.
 
 ### Objective
 
-This course teaches the basics of JavaScript development and [Single Page Applications](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58) with Angular.
+This course teaches the basics of JavaScript development and [Single Page Applications](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58) with `Angular`.
 
 → [index](#index)
 
@@ -82,7 +99,7 @@ exercises as wanted.
 
 ### Materials
 
-1. You will need to install [Node.JS](https://nodejs.org/en/) (Version 8) (NVM is strongly recommended - [Unix](https://github.com/creationix/nvm#installation)/[Windows](https://github.com/coreybutler/nvm-windows))
+1. You will need to install [Node.JS](https://nodejs.org/en/) (Version 6) (NVM is strongly recommended - [Unix](https://github.com/creationix/nvm#installation)/[Windows](https://github.com/coreybutler/nvm-windows))
 
 2. The recommended IDE is [Visual Studio Code](https://code.visualstudio.com/). However, you can use any IDE of your preference.
 
@@ -105,7 +122,7 @@ The boot camp is organized in the following way:
 ![Calendar](assets/calendar.png)
 
 The first week is oriented to learn the basics around JavaScript and Node. This
-Bootcamp assumes you already know the basics of Js syntax. If this is not your
+Bootcamp assumes you already know the basics of `Js` syntax. If this is not your
 case, it is recommended to take a look to the following topics:
 
 - [Js Values, Types, and Operators](http://eloquentjavascript.net/01_values.html)
@@ -131,7 +148,6 @@ You will learn about Cross-Compiled apps, Hybrid Apps, and Progressive Web Apps.
 awaiting for you is making last week's app more scallable, you will add lazy loaded modules with routing and you will
 upgrade the security with some route guards.
 
-
 ### General Guidelines
 
 1. [Team play](http://www.dummies.com/how-to/content/ten-qualities-of-an-effective-team-player.html) is encouraged but the work will be evaluated per person.
@@ -141,7 +157,7 @@ You must look for support and guidance from your PM, teammates and tutors.
 
 3. All code and documentation must be in English.
 
-4. Js Code must adhere to this [Coding Style Guide](https://github.com/airbnb/javascript).
+4. `Js` Code must adhere to this [Coding Style Guide](https://github.com/airbnb/javascript).
 
 5. Ts and Angular Code must adhere to this [Coding Style Guide](https://angular.io/guide/styleguide).
 
@@ -150,7 +166,7 @@ You must look for support and guidance from your PM, teammates and tutors.
 ### Learning Days ###
 
 Each day you will grab the fundamentals of the key building blocks for usual
-Js/Ts/Angular applications.
+`Js/Ts/Angular` applications.
 
 On each learning day you will have to:
 
@@ -163,7 +179,7 @@ following practice.
 You will implement the previously gathered knowledge in simple coding activities.
 
 3. **Commit:**
-You will commit all your code on a daily basis, when you finish your practice. This will not apply for code of Week 4.
+You will commit all your code on a daily basis, when you finish your practice. This will not apply for code of Week 3 and 4.
 
 # Introduction
 
@@ -179,13 +195,15 @@ You will commit all your code on a daily basis, when you finish your practice. T
 
 → [index](#index)
 
+_Now let's get down to business_
+
 # Week 1: JavaScript and Node 101
 
 ## Day 1: The Secret Life of Objects
 
 ![Suspicious](assets/suspicious.gif)
 
-Js is often called an Object oriented language, but actually that isn't 100% true. In Js
+`Js` is often called an Object oriented language, but actually that isn't 100% true. In `Js`
 we have what's called `Prototipal Inheritance`.
 In this lesson you will learn all about the Prototype, Inheritance, Getters, Setters, Constructors and Polymorfism.
 
@@ -206,7 +224,7 @@ We still have that ~~hideous~~ beautiful `Prototype` under the hood, so don't ge
 ## Day 2: Going Regular with RegEx (Also, learn how to hunt those bugs)
 One of the most ~~hated~~ used features on any kind of language are Regular Expressions, aka RegEx. Those are **REALLY** powerfull strings (they are more like a really special kind of strings) that allow you to capture any pattern you want on any kind of string. You can make sure all emails accounts end up with `@something.com` or all the names are at most 4 characters long... you get the idea.
 
-Also, you will be learning error handling and some of the finest debugging techniques out there. Or, as I like to call them, **_learn how to properly use the browser console_**.
+Also, you will be learning error handling and some of the finest debugging techniques out there. Or, as I like to call them, **_learn how to properly use your tools_**.
 
 Read up and catch 'em all
 
@@ -230,7 +248,7 @@ The code comes to life. All works fine (at least if you coded right :unamused:) 
 
 ![Magic](assets/magic.gif)
 
-No, no it's not. It's the browser's engine. Js runs inside a browser on a [VM](https://en.wikipedia.org/wiki/JavaScript_engine), that VM could be
+No, no it's not. It's the browser's engine. `Js` runs inside a browser on a [VM](https://en.wikipedia.org/wiki/JavaScript_engine), that VM could be
 [V8](https://developers.google.com/v8/) (Chrome), [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey) (Firefox), [Chakra](https://github.com/Microsoft/ChakraCore) (Edge) or [Nitro](https://developer.apple.com/documentation/javascriptcore) (Safari)
 
 For day 3 you will learn about the Browser, the Document Object Model (basically the whole thing you are seeing on the browser's window) and DOM Events.
@@ -248,7 +266,7 @@ The browser and the server (the little computer thingy that lives on the cloud a
 
 - [HTTP](http://eloquentjavascript.net/17_http.html)
 
-Users communicate with the application via `forms`, those are fill up sections which where designed on a time before Js where all interactions with the server where made while navigating to a new page. That kind of interaction is **SO** web 1.0 but, we still use `forms`.
+Users communicate with the application via `forms`, those are fill up sections which where designed on a time before `Js` where all interactions with the server where made while navigating to a new page. That kind of interaction is **SO** web 1.0 but, we still use `forms`.
 
 - [Forms](http://eloquentjavascript.net/18_forms.html)
 
@@ -257,16 +275,17 @@ Users communicate with the application via `forms`, those are fill up sections w
 Look into [`src/week1/day3`](src/week1/day3) in there there're some `index` files, poke around and follow the instructions.
 
 ## Day 4 and 5: require('Node.js')
-So, at this point you pretty much are up to speed with Js. But Js does not only run on a
+So, at this point you pretty much are up to speed with `Js`. But `Js` does not only run on a
 browser. **YES** you read me right, you can make a `server`, a `robot`, a `game`, you
 can eve run it on an _Arduino_. The sky's the limit.
 
-How is that even possible you ask? Well, Js' community was aways **HUGE**, so it was more than expected that a person asked `Why not?`
+How is that even possible you ask? Well, `Js` community was aways **HUGE**, so it was more than expected that a person asked `Why not?`
 That's how [`Node`](https://nodejs.org/en/) was born.
 
-Node.js is a Js runtime that runs outside the browser on a V8 VM, there's a Node fork for almost everything.
+`Node.js` is a `Js` runtime that runs outside the browser on a V8 VM, there's a Node fork for almost everything.
 
-So, first, to understand how node works, you need to learn one last thing about Js, `Modules`
+### Reading
+First, to understand how node works, you need to learn one last thing about `Js`, `Modules`
 
 - [Modules](http://eloquentjavascript.net/10_modules.html)
 
@@ -284,7 +303,7 @@ Then you can go on with this
 - [How npm works?](https://docs.npmjs.com/how-npm-works/npm3)
 
 ### Exercise:
-Look into [`src/week1/day4-5`](src/week1/day4-5) in there there're some `js` files. Those 2 are Node.js apps, they don't work as you would expect from any other `.js` file.
+Look into [`src/week1/day4-5`](src/week1/day4-5) in there there're some `js` files. Those 2 are `Node.js` apps, they don't work as you would expect from any other `.js` file.
 You will need to use the command line:
 ```
 luca.sartori@AR-IT12688:~/bootcamps/ui$
@@ -319,36 +338,148 @@ Don't be afraid to Google stuff, no developer remembers everything
 → [index](#index)
 
 # Week 2: TypeScript and Angular 101
+So, here we are. This is the first step into a whole new world. It doesn't matter if it's [Angular](https://angular.io/), [React](https://reactjs.org/), [Vue](https://vuejs.org/) or any `Js` framework. The latest generation of those tools makes the whole development process a breeze.
+Welcome to the SPA world.
+
+![New World](assets/newWorld.gif)
+
+Here at Globant we are technology agnostic, every developer is welcomed to study anything he wants. However we do recommend from a maturity and scalabilty points of view `Angular` or `React`.
+
+This Bootcamp will be made around `Angular` that does not mean that you should stop there, if you want to dig into `React` please do, it'll help you in the future.
+
+**SO**... going back to our business: **`WEEK 2`** - Beginning our project.
+
+## Day 6: TypeScript 101
+
+Let's start with [TypeScript](http://www.typescriptlang.org/),  basically a superset of `Js`, with some advantages
+1. Types
+```
+var number: number = 1;
+var word: string = "1";
+
+return number === word;
+// IS NOT THE SAME
+
+number = word;
+// CAN'T BE DONE, DIFFERENT TYPES
+```
+2. Intellisense
+
+![Intellisense](assets/intellisense.gif)
+
+3. Generics - generic code for any type
+```
+class Greeter<T> {
+    greeting: T;
+    constructor(message: T) {
+        this.greeting = message;
+    }
+    greet() {
+        return this.greeting;
+    }
+}
+
+let greeter = new Greeter<string>("Hello, world");
+
+let button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function() {
+    alert(greeter.greet());
+}
+
+document.body.appendChild(button);
+```
+4. Transpilation - write in Ts, get ES6, ES5, ES4, etc...
+![Transpilation](assets/transpilation.png)
+[_Taken from Ts Playground_](http://www.typescriptlang.org/play/index.html)
+
+Relax, you can always keep writing Js with TypeScript
+
+And there's more and more... but that's for you to read:
 
 ### Reading:
+- [TypeScript in 5 minutes](http://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [Basic Types](http://www.typescriptlang.org/docs/handbook/basic-types.html)
+- [Variable Declarations](http://www.typescriptlang.org/docs/handbook/variable-declarations.html)
 
-## Day 6:
+## Day 7: Still Ts
+Get ready, there's a lot where the previous day came from.
 
-### Exercise:
-
-## Day 7: Unit Testing
-
-### Reading:
-
-
-### Exercise:
-
+### Reading
+- [Interfaces](http://www.typescriptlang.org/docs/handbook/interfaces.html)
+- [Classes](http://www.typescriptlang.org/docs/handbook/classes.html)
+- [Generics](http://www.typescriptlang.org/docs/handbook/generics.html)
+- [Enums](http://www.typescriptlang.org/docs/handbook/enums.html)
+- [Type Inference](http://www.typescriptlang.org/docs/handbook/type-inference.html)
+- [Type Compatibility](http://www.typescriptlang.org/docs/handbook/type-compatibility.html)
+- [Advanced Types](http://www.typescriptlang.org/docs/handbook/advanced-types.html)
 
 **Notes:**
 
+There is no excercise section on these two days because as this is a superset of `Js` you already know how it works. Take them as free days so you can digest all that new info about `Ts` specific features.
 
-## Day 8, 9 and 10: 
+All `Ts` code will be evaluated with `Angular` as that's the language it uses.
+
+
+## Day 8, 9 and 10: Angular 101
+So yes, here we are, `Angular`. The **ONE** framework (as they say) you may know it for it's previous generation, the highly important and famous _angular.js_.
+
+_But as they say... water under the bridge._
+
+`Angular` is a new framework, a new codebase and **A LOT** of new features. The team wanted _so bad_ to emphasize the _new_ part that the ditched the `.js` part of the name (commonly used on Js frameworks) and they adopted [_semver_](http://semver.org/).
+
+The current version is 5.0, but we will focus on version 4.x as this is more mature and stable and most of the features of 5.0 are not difficult to learn after picking up 4.x
 
 ### Reading:
+- [Angular Quickstart](https://angular.io/guide/quickstart)
+- [Angular Intro - Tour of Heroes](https://angular.io/tutorial)
 
+### ~~Not So~~ Optional Reading
+- [Angular CLI](https://github.com/angular/angular-cli)
 
 ### Exercise:
+
+The exercise for the week, is simple. We want you to be friends with `Angular`, so what's best than talking to each other?
+
+You will do the `Tour of Heroes App` featured in the intro above. For that you'll have to follow the instructions on the page. However, as we want you to make the code, not copy/paste it there's a catch.
+
+_You will need to make a commit after every step, each one with a difference of at least 20 minutes. That way we can **at least try** to believe that you typed the code_
+
+Keep in mind:
+1. The app must be under [src/week2](src/week2)
+2. You will need to install Angular CLI
+3. You are expected to follow `Angular`'s code standards
+4. Make a personal touch, you should be listed as a hero (cool powers only :grimacing:)
 
 → [index](#index)
 
 # Week 3: Angular 201
+Things are getting serious, are you ready to dive deep into `Angular`'s architechture?
+
+![Study](assets/study.gif)
+
+You will learn about the fundamentals, the good ways, the more performant and powerful approaches.
 
 ### Reading:
+- [Architechture](https://angular.io/guide/architecture)
+- [Displaying Data](https://angular.io/guide/displaying-data)
+- [Template Sintax](https://angular.io/guide/template-syntax)
+- [Lifecycle Hooks](https://angular.io/guide/lifecycle-hooks)
+- [Component Interactions](https://angular.io/guide/component-interaction)
+- [Component Styles](https://angular.io/guide/component-styles)
+- [Attribute Directives](https://angular.io/guide/attribute-directives)
+- [Structural Directives](https://angular.io/guide/structural-directives)
+- [Pipes](https://angular.io/guide/pipes)
+- [User Input](https://angular.io/guide/user-input)
+- [Forms](https://angular.io/guide/forms)
+- [Form Valitdation](https://angular.io/guide/form-validation)
+- [NgModule](https://angular.io/guide/ngmodule)
+- [Router](https://angular.io/guide/router)
+- [Http Client](https://angular.io/guide/http)
+- [Testing](https://angular.io/guide/testing)
+
+### ~~Not So~~ Optional reading
+- [Flexbox - CSS leveled up](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### Exercise:
 
@@ -356,11 +487,46 @@ Don't be afraid to Google stuff, no developer remembers everything
 
 # Week 4: Angular 301 and stuff
 
-### Reading:
+So... you've got your `Angular` going, you read a **LOT** of stuff last week, you started a SPA. So... What's next?
 
+![Homer Scholar](assets/homerSquareRoot.gif)
+
+There're still a lot of stuff to read, some of them really work better under specific conditions or requirements. Remember:
+
+_KEEP IT SIMPLE_
+
+If there's a more advanced or complicated way to get to a solution it doesn't always mean that's the better approach.
+
+With that in mind, here are some more advanced _(or not, this **whole** crash course was made by a bored developer on a few days span)_ features that every one should know, and at least being able to explain them. 
+
+### Reading:
+- [Dinamic Component Loader](https://angular.io/guide/dynamic-component-loader)
+- [Animations](https://angular.io/guide/animations)
+- [Reactive Forms](https://angular.io/guide/reactive-forms)
+- [Dynamic Forms](https://angular.io/guide/dynamic-form)
+- [Bootstraping](https://angular.io/guide/bootstrapping)
+- [Dependency Injection](https://angular.io/guide/dependency-injection-pattern)
+- [DI in Angular](https://angular.io/guide/dependency-injection)
+- [Hierarchical DI](https://angular.io/guide/hierarchical-dependency-injection)
+- [DI in Action](https://angular.io/guide/dependency-injection-in-action)
+- [Server Side Rendering](https://angular.io/guide/universal)
+
+### ~~Not So~~ Optional Reading
+- [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
+- [PWAs on Angular](http://www.youtube.com/watch?v=C8KcW1Nj3Mw)
+- [Hybrid Apps](https://developer.telerik.com/featured/what-is-a-hybrid-mobile-app/)
+- [Hybrid Angular Apps - Ionic Framework](https://ionicframework.com/)
+- [Cross Compiled Apps](https://developer.telerik.com/featured/defining-a-new-breed-of-cross-platform-mobile-apps/)
+- [Cross Compiled Apps with Angular - NativeScript](https://www.nativescript.org/)
+- [Cross Compiled Apps with React - React Native](https://facebook.github.io/react-native/)
 
 ### Exercise:
 
 **Some advices**
+- Dont't get scared. Even the most successfull Software Engineers and Architects forget things sometimes.
+- Google is your friend, independence and curiosity are great values that every developer need to have.
+- The only way to learn is to fail, so keep failing.
+- Theory is nice, but you need to get your hands dirty if you want things to stick.
+- Remember, _a happy developer is a great developer_ (_also_, **coffee** is your best friend)
 
-## Important:
+Kudos and keep ~~failing~~ learning!
