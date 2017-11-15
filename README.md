@@ -132,6 +132,12 @@ case, it is recommended to take a look to the following topics:
 - [Js Functions](http://eloquentjavascript.net/03_functions.html)
 - [Js Data Structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
 
+In addition you will need to be up to date with some concepts
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Responsive Design](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
+- [Web Components](https://www.webcomponents.org/introduction#what-are-web-components-)
+
 Each day of the first week you will have a small exercise at the end of the day.
 You must code the exercise inside the corresponding folder, example
 `src/week1/day1/index.js` will contain the code for the exercise of the Day 1.
@@ -445,6 +451,13 @@ The exercise for the week, is simple. We want you to be friends with `Angular`, 
 
 You will do the `Tour of Heroes App` featured in the intro above. For that you'll have to follow the instructions on the page. However, as we want you to make the code, not copy/paste it there's a catch.
 
+I've initialized the project for you, just run
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui/week2$ npm install
+```
+
+_Remember: `ng serve` starts the app on `http://localhost:4200`_
+
 _You will need to make a commit after every step, each one with a difference of at least 20 minutes. That way we can **at least try** to believe that you typed the code_
 
 Keep in mind:
@@ -487,6 +500,48 @@ You will learn about the fundamentals, the good ways, the more performant and po
 
 ![Show Me What You Got](assets/SMWYG.gif)
 
+#### _It's time to make an app from scratch_
+
+You are going to make a **Scientific app**.
+
+#### MarsBoot: from mars to your screen
+
+Let's get our requirements together:
+- The app should be responsive
+- You should make the app modular. There should be several components
+- Here are some mockups for the app. You'll have a main screen and a photo detail page
+
+Home
+
+![Homepage](assets/nasaHome.jpg)
+
+Detail
+
+![Detail Page](assets/nasaDetail.jpg)
+
+- [You'll have to use this API](https://api.nasa.gov/api.html#MarsPhotos)
+- Here's an API key for you to use `aZlmHCp3jD9sanwE8KvytidYArlTvlhwr3fEhYyM`
+- Here are some API call examples
+```
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY
+
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=DEMO_KEY
+
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY
+```
+
+- You have several cameras
+- You can change the camera displaying in a row
+- You can click on an image and it'll get you to it's detail page (is the same page as the 'photo of the day' but with a different title)
+- You can add any feature you like
+
+Create a week3-4 folder, go inside and run:
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ ng start
+```
+
+**_Hey, don't panic. This excercise is for this week and the next one_**
+
 → [index](#index)
 
 # Week 4: Angular 301 and stuff
@@ -526,9 +581,28 @@ With that in mind, here are some more advanced _(or not, this **whole** crash co
 
 ### Exercise:
 
+As I wrote some lines above, the previous week excercise may also be done on this week.
+
+Your app should look something like this:
+
+Home
+
+![Homepage](assets/homeResult.jpg)
+
+Detail
+
+![Detail Page](assets/detailResult.jpg)
+
+You have until the last day of this week to keep pushing changes. After that you can keep workin on the app, but please create a new branch for it:
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ git checkout -b 'post-bootcamp'
+
+luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ git push origin post-bootcamp
+```
+
 **Some advices**
 - Dont't get scared. Even the most successfull Software Engineers and Architects forget things sometimes.
-- Google is your friend, independence and curiosity are great values that every developer need to have.
+- Google is your friend, independence and curiosity are great values that every developer needs to have.
 - The only way to learn is to fail, so keep failing.
 - Theory is nice, but you need to get your hands dirty if you want things to stick.
 - Remember, _a happy developer is a great developer_ (_also_, **coffee** is your best friend)
