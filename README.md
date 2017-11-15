@@ -79,7 +79,7 @@ Four weeks total. (20 days)
 ### Technical Assistance
 
 You can contact other Bootcamp participants or any available tutor if you need
-technical assistance. Comunnications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Channel]()
+technical assistance. Communications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Channel]()
 
 ### Performance Measurement
 
@@ -534,6 +534,7 @@ https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&
 - You can change the camera displaying in a row
 - You can click on an image and it'll get you to it's detail page (is the same page as the 'photo of the day' but with a different title)
 - You can add any feature you like
+- The photo of the day should be a __random__ picture from a __random__ camera
 
 Create a week3-4 folder, go inside and run:
 ```
