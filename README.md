@@ -430,7 +430,7 @@ _But as they say... water under the bridge._
 
 `Angular` is a new framework, a new codebase and **A LOT** of new features. The team wanted _so bad_ to emphasize the _new_ part that the ditched the `.js` part of the name (commonly used on Js frameworks) and they adopted [_semver_](http://semver.org/).
 
-The current version is 5.0, but we will focus on version 4.x as this is more mature and stable and most of the features of 5.0 are not difficult to learn after picking up 4.x
+The current stable version is 5.0
 
 ### Reading:
 - [Angular Quickstart](https://angular.io/guide/quickstart)
@@ -484,6 +484,8 @@ You will learn about the fundamentals, the good ways, the more performant and po
 - [Flexbox - CSS leveled up](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### Exercise:
+
+![Show Me What You Got](assets/SMWYG.gif)
 
 → [index](#index)
 
