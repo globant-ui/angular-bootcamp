@@ -145,16 +145,15 @@ You must code the exercise inside the corresponding folder, example
 The second week introduces you to TypeScript and Angular. JavaScript is an easy typed language, that means
 as a developer you have total control over the whole structure of the code. Sometimes that's
 an advantage, but as the app grows and more people become involved things go out of hand.
-That's when TypeScript comes to the rescue. At the end of this week you will have a basic Angular App running.
+That's when TypeScript comes to the rescue. At the end of this week you will make the famous `Tour of Heroes`.
 
 The third week is oriented to learn Angular at an intermediate level. Angular is one of the biggest UI frameworks
-out there; there's a lot to learn. On this week's challenge you will be expected to do an application
-with routing, forms, and some sweet Flexbox magic.
+out there; there's a lot to learn. On this week's challenge you will begin your final work.
 
 The last week will be focused on intermediate/advanced Angular (and not Angular exclusive) features.
 You will learn about Cross-Compiled apps, Hybrid Apps, and Progressive Web Apps. At the end of the week the challenge
-awaiting for you is making last week's app more scallable, you will add lazy loaded modules with routing and you will
-upgrade the security with some route guards.
+awaiting for you is finishing last week's app. You need to present your work at the end of the week, _however_
+you can keep working on it (more on that later).
 
 ### General Guidelines
 
