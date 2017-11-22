@@ -82,6 +82,8 @@ Four weeks total. (20 days)
 You can contact other Bootcamp participants or any available tutor if you need
 technical assistance. Communications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Workspace](https://globant-bootcamps2018.slack.com)
 
+→ [index](#index)
+
 ### Performance Measurement
 
 1. Code review after each practice.
@@ -120,11 +122,12 @@ account. Also you can read further about Git in
 
 ### Bootcamp Schedule
 
-The boot camp is organized in the following way:
+The Bootcamp is organized in the following way:
 
 ![Calendar](assets/calendar-new.png)
 
-The first week is oriented to learn the basics around HTML and CSS and JavaScript
+The first week is oriented to learn the basics around HTML and CSS and JavaScript.
+You will be doing some exercises along your reading
 
 The second week dives deep into `JavaScript` and some `Node.js` _mumbo jumbo_.
 Again, you will have homework to do for the week.
@@ -138,6 +141,8 @@ The last week will be focused on starting an app and learning some _shiny cool_ 
 you can keep working on it (more on that later).
 
 ### You will encounter some pages with extra excercises on them. You have the power to choose if you want to do them or not. Just remember, if you do, put them on the [extra folder](src/extra)
+
+→ [index](#index)
 
 ### General Guidelines
 
@@ -154,7 +159,7 @@ You must look for support and guidance from your PM, teammates and tutors.
 
 6. `Js` code must adhere to Globant's [Js Style Guide](https://github.com/globant-ui/JavaScript-style-guide).
 
-7. `Ts` and `Angular` code must adhere to Angular's [Style Guide](https://angular.io/guide/styleguide).
+7. `Ts` and `Angular` code must adhere to [Angular's Style Guide](https://angular.io/guide/styleguide).
 
 → [index](#index)
 
@@ -176,6 +181,8 @@ You will implement the previously gathered knowledge in simple coding activities
 3. **Commit:**
 You will commit all your code on a daily basis, when you finish your practice. This will not apply for code of Week 3 and 4.
 
+→ [index](#index)
+
 # Introduction
 
   - This repository contains inside the `src` directory the project structure for all exercises/challenges that you will
@@ -186,9 +193,11 @@ You will commit all your code on a daily basis, when you finish your practice. T
 
   - Once the server is running, all the modifications you make will be automagically synced and the app will reload.
 
-  - [Basic GIT concepts](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
+  - [Basic GIT concepts](http://rogerdudler.github.io/git-guide/)
 
   - __READ THAT__ :arrow_up: :arrow_up: :arrow_up:
+
+  - [Extra GIT material](https://www.acamica.com/cursos/29/git)
 
 → [index](#index)
 
@@ -236,11 +245,17 @@ Just put all your work under [day0](src/week1/day0)
 - [Why use Web Components](https://medium.com/@gilfink/why-im-betting-on-web-components-and-you-should-think-about-using-them-too-8629396e27a)
 - This is your new best friend, [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). The best responsive-friendly CSS model.
 
-## Day 2 - 5: Hello JavaScript
+→ [index](#index)
+
+## Day 3 - 5: Hello JavaScript
 
 _Yes, I know I missed the other days, but c'mon. I'm giving you space to learn._
 
-I'm sure you must be an HTML & CSS guru by now, so I'm going to present you to your new challenge: `Js`
+I'm sure you must be an HTML & CSS guru by now, right?
+
+![This is fine](assets/thisIsFine.gif)
+
+So, are you ready for your new challenge? `Js`
 
 _JavaScript is an event driven programming language that runs in all Web Browsers. Using JavaScript we can create full-fledge web applications._
 
@@ -260,6 +275,8 @@ I hope you liked that book, because it's going to stick with us for the rest of 
 I think you noticed by now, but there are a few exercises inside the reading material (awesome, I know). Do them, this is basic `Js` and we need you to have fun with it.
 
 Just put all your work under [day2-5](src/week1/day2-5) once you finished the exercises on page.
+
+→ [index](#index)
 
 # Week 2: Diving into JavaScript and Node 101
 
@@ -285,6 +302,8 @@ We still have that ~~hideous~~ beautiful `Prototype` under the hood, so don't ge
 
 - [ES6 Class Sintax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
+→ [index](#index)
+
 ## Day 7: Going Regular with RegEx (Also, learn how to hunt those bugs)
 One of the most ~~hated~~ used features on any kind of language are Regular Expressions, aka RegEx. Those are **REALLY** powerfull strings (they are more like a really special kind of strings) that allow you to capture any pattern you want on any kind of string. You can make sure all emails accounts end up with `@something.com` or all the names are at most 4 characters long... you get the idea.
 
@@ -294,13 +313,15 @@ Read up and catch 'em all
 
 ![Catch](assets/catch.gif)
 
-
 ### Reading:
 - [Regular Expressions](http://eloquentjavascript.net/09_regexp.html)
+- [An Introduction to Regular Expressions (Regex) In JavaScript](https://codeburst.io/an-introduction-to-regular-expressions-regex-in-javascript-1d3559e7ac9a)
 - [Errors and debugging](http://eloquentjavascript.net/08_error.html)
 
 ### Exercise:
 Look into [`src/week2/day2`](src/week1/day2) in there there're some `index` files, poke around and follow the instructions.
+
+→ [index](#index)
 
 ## Day 3: The browser, where the _magic_ happens
 
@@ -334,14 +355,22 @@ Users communicate with the application via `forms`, those are fill up sections w
 
 - [Forms](http://eloquentjavascript.net/18_forms.html)
 
+- [Design patterns](https://sourcemaking.com/design_patterns), the blueprints to a reliable application.
+
+- [4 JavaScript Design Patterns You Should Know](https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know)
+
 
 ### Exercise:
 Look into [`src/week2/day3`](src/week1/day3) in there there're some `index` files, poke around and follow the instructions.
+
+→ [index](#index)
 
 ## Day 8 and 9: require('Node.js')
 So, at this point you pretty much are up to speed with `Js`. But `Js` does not only run on a
 browser. **YES** you read me right, you can make a `server`, a `robot`, a `game`, you
 can eve run it on an _Arduino_. The sky's the limit.
+
+![Excited](assets/excited.gif)
 
 How is that even possible you ask? Well, `Js` community was aways **HUGE**, so it was more than expected that a person asked `Why not?`
 That's how [`Node`](https://nodejs.org/en/) was born.
@@ -411,8 +440,6 @@ Here at Globant we are technology agnostic, every developer is welcomed to study
 
 This Bootcamp will focus around `Angular` that does not mean that you should stop there, if you want to dig into `React` please do, it'll help you in the future.
 
-**SO**... going back to our business: **`WEEK 3** - Beginning our project.
-
 ## Day 10: TypeScript 101
 
 Let's start with [TypeScript](http://www.typescriptlang.org/),  basically a superset of `Js`, with some advantages
@@ -465,6 +492,8 @@ And there's more and more... but that's for you to read:
 - [TypeScript in 5 minutes](http://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 - [Basic Types](http://www.typescriptlang.org/docs/handbook/basic-types.html)
 - [Variable Declarations](http://www.typescriptlang.org/docs/handbook/variable-declarations.html)
+
+→ [index](#index)
 
 ## Day 11: Still Ts
 Get ready, there's a lot where the previous day came from.
@@ -625,7 +654,6 @@ Kudos and keep ~~failing~~ learning!
 → [index](#index)
 
 
-
 # BONUS
 
 So... you've got your `Angular` going, you read a **LOT** of stuff, you started a SPA. So... What's next?
@@ -648,4 +676,4 @@ With that in mind, here are some more advanced _(or not, this **whole** beatiful
 - [Cross Compiled Apps with Angular - NativeScript](https://www.nativescript.org/)
 - [Cross Compiled Apps with React - React Native](https://facebook.github.io/react-native/)
 
-Hey, If you need a place to kill time try [Medium](medium.com), there's a lot to read about pretty much anything (specially development related topics). One of my favorites sections is [Angular in depth](https://blog.angularindepth.com/)
+Hey, If you need a place to kill time try [Medium](medium.com), there's a lot to read about pretty much anything (specially development related topics). One of my favorites sections is [Angular in depth](https://blog.angularindepth.com/).
