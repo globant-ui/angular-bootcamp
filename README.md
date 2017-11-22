@@ -122,7 +122,7 @@ account. Also you can read further about Git in
 
 The boot camp is organized in the following way:
 
-![Calendar](assets/calendar.png)
+![Calendar](assets/calendar-new.png)
 
 The first week is oriented to learn the basics around HTML and CSS and JavaScript
 
