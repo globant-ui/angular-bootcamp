@@ -1,8 +1,9 @@
-# JavaScript / Angular Bootcamp - 2018
+# UI Bootcamps
+## HTML - CSS - JavaScript _(Angular oriented :wink:)_
 
 ![Globant](assets/globant.jpg)
 
-## IMPORTANT DISCLAIMER
+## __IMPORTANT DISCLAIMER__
 This is not your typical _crash course_, this is a **Bootcamp**.
 
 What does that mean?
@@ -20,12 +21,12 @@ But most important, there will be **A LOT** of humor, because a happy developer 
 _That said..._
 
 
-## Welcome to the bootcamp, training time has begun
+## Welcome to the bootcamp, learning time has begun
 
 ![Workout](assets/workout.gif)
 
-Please, use this repository as a base for you training phase. The idea is to
-fork this project so everyone use the same folder structure for the
+Please, use this repository as a base for all your work. The idea is to
+fork this project so everyone uses the same folder structure for the
 exercises.
 
 #### Index
@@ -50,21 +51,21 @@ exercises.
 
 10. [Learning Days](#learning-days)
 
-  - 10.1 [Week 1: JavaScript and Node 101](#week-1-javascript-and-node-101)
-  - 10.2 [Week 2: TypeScript and Angular 101](#week-2-typescript-and-angular-101)
-  - 10.3 [Week 3: Angular 201](#week-3-angular-201)
-  - 10.4 [Week 4: Angular 301 and stuff](#week-4-angular-301-and-stuff)
+  - 10.1 [Week 1: HTML, CSS and Javascript](#week-1-html-css-and-javascript)
+  - 10.2 [Week 2: Diving into JavaScript and Node 101](#week-2-diving-into-javascript-and-node-101)
+  - 10.3 [Week 3: TypeScript and Angular 101](#week-3-typescript-and-angular-101)
+  - 10.4 [Week 4: Angular 201](#week-4-angular-201)
 
 
 ### Objective
 
-This course teaches the basics of JavaScript development and [Single Page Applications](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58) with `Angular`.
+We will teach you the basics of Web development using JavaScript and [Single Page Applications](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58) with `Angular`.
 
 → [index](#index)
 
 ### Who Should Attend
 
-The training will start at a low level and does not require in depth knowledge
+The materials will start at a low level and does not require in depth knowledge
 of the platform in question. Desirable participant profile: trainees and outside
 Globant candidates. A basic knowledge on OOP is desired, though.
 
@@ -79,7 +80,7 @@ Four weeks total. (20 days)
 ### Technical Assistance
 
 You can contact other Bootcamp participants or any available tutor if you need
-technical assistance. Communications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Channel]()
+technical assistance. Communications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Workspace](https://globant-bootcamps2018.slack.com)
 
 ### Performance Measurement
 
@@ -123,37 +124,20 @@ The boot camp is organized in the following way:
 
 ![Calendar](assets/calendar.png)
 
-The first week is oriented to learn the basics around JavaScript and Node. This
-Bootcamp assumes you already know the basics of `Js` syntax. If this is not your
-case, it is recommended to take a look to the following topics:
+The first week is oriented to learn the basics around HTML and CSS and JavaScript
 
-- [Js Values, Types, and Operators](http://eloquentjavascript.net/01_values.html)
-- [Js Program Structure](http://eloquentjavascript.net/02_program_structure.html)
-- [Js Functions](http://eloquentjavascript.net/03_functions.html)
-- [Js Data Structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
+The second week dives deep into `JavaScript` and some `Node.js` _mumbo jumbo_.
+Again, you will have homework to do for the week.
 
-In addition you will need to be up to date with some concepts
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [Responsive Design](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
-- [Web Components](https://www.webcomponents.org/introduction#what-are-web-components-)
+The third week introduces you to TypeScript and Angular. JavaScript is an easy typed language,
+that means
+as a developer you have total control over the whole structure of the code. Sometimes that's an advantage, but as the app grows and more people become involved things go out of hand.
+That's when TypeScript comes to the rescue. At the end of this week you will make the famous `Tour of Heroes` app.
 
-Each day of the first week you will have a small exercise at the end of the day.
-You must code the exercise inside the corresponding folder, example
-`src/week1/day1/index.js` will contain the code for the exercise of the Day 1.
-
-The second week introduces you to TypeScript and Angular. JavaScript is an easy typed language, that means
-as a developer you have total control over the whole structure of the code. Sometimes that's
-an advantage, but as the app grows and more people become involved things go out of hand.
-That's when TypeScript comes to the rescue. At the end of this week you will make the famous `Tour of Heroes`.
-
-The third week is oriented to learn Angular at an intermediate level. Angular is one of the biggest UI frameworks
-out there; there's a lot to learn. On this week's challenge you will begin your final work.
-
-The last week will be focused on intermediate/advanced Angular (and not Angular exclusive) features.
-You will learn about Cross-Compiled apps, Hybrid Apps, and Progressive Web Apps. At the end of the week the challenge
-awaiting for you is finishing last week's app. You need to present your work at the end of the week, _however_
+The last week will be focused on starting an app and learning some _shiny cool_ stuff. You need to present your work at the end of the week, _however_
 you can keep working on it (more on that later).
+
+### You will encounter some pages with extra excercises on them. You have the power to choose if you want to do them or not. Just remember, if you do, put them on the [extra folder](src/extra)
 
 ### General Guidelines
 
@@ -164,15 +148,19 @@ You must look for support and guidance from your PM, teammates and tutors.
 
 3. All code and documentation must be in English.
 
-4. `Js` Code must adhere to this [Coding Style Guide](https://github.com/airbnb/javascript).
+4. `HTML` syntax must adhere to Globant's [HTML Style Guide](https://github.com/globant-ui/html-style-guide).
 
-5. Ts and Angular Code must adhere to this [Coding Style Guide](https://angular.io/guide/styleguide).
+5. `CSS` code must adhere to Globant's [CSS Style Guide](https://github.com/globant-ui/css-style-guide)
+
+6. `Js` code must adhere to Globant's [Js Style Guide](https://github.com/globant-ui/JavaScript-style-guide).
+
+7. `Ts` and `Angular` code must adhere to Angular's [Style Guide](https://angular.io/guide/styleguide).
 
 → [index](#index)
 
 ### Learning Days ###
 
-Each day you will grab the fundamentals of the key building blocks for usual
+Each day you will grab the fundamentals of building blocks for usual
 `Js/Ts/Angular` applications.
 
 On each learning day you will have to:
@@ -194,19 +182,88 @@ You will commit all your code on a daily basis, when you finish your practice. T
   need to do.
 
   - All `.js` code can be opened directly on the browser. For Ts and Angular code you will need to run a Liteserver with
-  the Angular CLI. Just running `npm run serve` will be enough 
+  the Angular CLI. Just running `ng serve` or `npm run serve` will be enough 
 
   - Once the server is running, all the modifications you make will be automagically synced and the app will reload.
 
   - [Basic GIT concepts](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 
+  - __READ THAT__ :arrow_up: :arrow_up: :arrow_up:
+
 → [index](#index)
 
 _Now let's get down to business_
 
-# Week 1: JavaScript and Node 101
+# Week 1: HTML, CSS and JavaScript
 
-## Day 1: The Secret Life of Objects
+## Day 0: _At the beginning t wast all HTML & CSS_
+
+So, what's _day 0_?
+
+We as developers know that every structure starts at `0` (any other dev or language that says the contrary is ___WRONG___) so this is the first thing you'll need to master before even trying to fight with the future topics.
+
+### History time
+
+Rumor has it that when the web was a little baby, at the early stages of `web 1.0` all was static and **SOOO** ugly.
+
+You may have encounter one of those exquisite pages:
+
+![Mr x page](assets/mrxPage.jpg)
+
+_YES_ pages looked like that _(and that's a pretty one)_ - all old HTML and CSS
+
+Fortunately people noticed that we needed new tools to create more dynamic and stylish experiences. Technologies have evolved and now we can make gorgeous experiences like [this one](https://feeddart.com/). Regardless, the basics are still the same.
+
+### Let's get on with it
+
+`HTML` describes the content semantics and structure of a web page. It was designed as a markup language, if you know XML ~~(the ugly father)~~, you could consider HTML as a subset of XML with a predefined semantic _(and soooo much friendly)_.
+
+On the other hand, CSS allows to define the look and feel of the content. It's used to set colors on HTML elements, customize sizes, define the layout of the document content, among others. (e.x. "The following list of elements must be shown as a menu", "The main title of the page should use this particular font", "_make things pretty_").
+
+JavaScript is a programming language that runs in all Web Browsers. Using JavaScript we can create full-fledge web applications (_and some magic_).
+
+### Reading:
+- Some other Globbers made this ~~meme-less~~ awesome [HTML & CSS 101](https://github.com/globant-ui/css-lab).
+
+### Exercise:
+So... I'm going to be honest with you, I'm lazy ~~as any dev should~~ and I'm not going to re-invent the weel ~~work extra~~.
+Your first days work is with our friends at [HTML & CSS 101](https://github.com/globant-ui/css-lab).
+Just put all your work under [day0](src/week1/day0)
+
+### ~~Not so~~ Optional Reading
+- [Responsive Design](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
+- [Web Components](https://www.webcomponents.org/introduction#what-are-web-components)
+- [Why use Web Components](https://medium.com/@gilfink/why-im-betting-on-web-components-and-you-should-think-about-using-them-too-8629396e27a)
+- This is your new best friend, [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). The best responsive-friendly CSS model.
+
+## Day 2 - 5: Hello JavaScript
+
+_Yes, I know I missed the other days, but c'mon. I'm giving you space to learn._
+
+I'm sure you must be an HTML & CSS guru by now, so I'm going to present you to your new challenge: `Js`
+
+_JavaScript is an event driven programming language that runs in all Web Browsers. Using JavaScript we can create full-fledge web applications._
+
+That's quite a definition, buy our friends at [Eloquent JavaScript](http://eloquentjavascript.net/00_intro.html#h_GlF1Kuv0JF) make an even better work.
+
+I hope you liked that book, because it's going to stick with us for the rest of this (and next) week.
+
+### Reading:
+
+- [Js Values, Types, and Operators](http://eloquentjavascript.net/01_values.html)
+- [Js Program Structure](http://eloquentjavascript.net/02_program_structure.html)
+- [Js Functions](http://eloquentjavascript.net/03_functions.html)
+- [Js Data Structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
+
+### Excercise:
+
+I think you noticed by now, but there are a few exercises inside the reading material (awesome, I know). Do them, this is basic `Js` and we need you to have fun with it.
+
+Just put all your work under [day2-5](src/week1/day2-5) once you finished the exercises on page.
+
+# Week 2: Diving into JavaScript and Node 101
+
+## Day 6: The Secret Life of Objects
 
 ![Suspicious](assets/suspicious.gif)
 
@@ -220,7 +277,7 @@ In this lesson you will learn all about the Prototype, Inheritance, Getters, Set
 
 ### Exercise:
 
-Look into [`src/week1/day1/index.html`](src/week1/day1/index.html) in there there's an `Animal` class with a talk method. Follow the instructions.
+Look into [`src/week2/day1/index.html`](src/week1/day1/index.html) in there there's an `Animal` class with a talk method. Follow the instructions.
 
 ### ~~Not So~~ Optional Reading
 Since ES6 went out we do have a _Class like_ sintax, **HOWEVER** that's [Syntactic Sugar](https://en.wikipedia.org/wiki/Syntactic_sugar).
@@ -228,7 +285,7 @@ We still have that ~~hideous~~ beautiful `Prototype` under the hood, so don't ge
 
 - [ES6 Class Sintax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-## Day 2: Going Regular with RegEx (Also, learn how to hunt those bugs)
+## Day 7: Going Regular with RegEx (Also, learn how to hunt those bugs)
 One of the most ~~hated~~ used features on any kind of language are Regular Expressions, aka RegEx. Those are **REALLY** powerfull strings (they are more like a really special kind of strings) that allow you to capture any pattern you want on any kind of string. You can make sure all emails accounts end up with `@something.com` or all the names are at most 4 characters long... you get the idea.
 
 Also, you will be learning error handling and some of the finest debugging techniques out there. Or, as I like to call them, **_learn how to properly use your tools_**.
@@ -243,7 +300,7 @@ Read up and catch 'em all
 - [Errors and debugging](http://eloquentjavascript.net/08_error.html)
 
 ### Exercise:
-Look into [`src/week1/day2`](src/week1/day2) in there there're some `index` files, poke around and follow the instructions.
+Look into [`src/week2/day2`](src/week1/day2) in there there're some `index` files, poke around and follow the instructions.
 
 ## Day 3: The browser, where the _magic_ happens
 
@@ -279,9 +336,9 @@ Users communicate with the application via `forms`, those are fill up sections w
 
 
 ### Exercise:
-Look into [`src/week1/day3`](src/week1/day3) in there there're some `index` files, poke around and follow the instructions.
+Look into [`src/week2/day3`](src/week1/day3) in there there're some `index` files, poke around and follow the instructions.
 
-## Day 4 and 5: require('Node.js')
+## Day 8 and 9: require('Node.js')
 So, at this point you pretty much are up to speed with `Js`. But `Js` does not only run on a
 browser. **YES** you read me right, you can make a `server`, a `robot`, a `game`, you
 can eve run it on an _Arduino_. The sky's the limit.
@@ -310,7 +367,7 @@ Then you can go on with this
 - [How npm works?](https://docs.npmjs.com/how-npm-works/npm3)
 
 ### Exercise:
-Look into [`src/week1/day4-5`](src/week1/day4-5) in there there're some `js` files. Those 2 are `Node.js` apps, they don't work as you would expect from any other `.js` file.
+Look into [`src/week2/day4-5`](src/week1/day4-5) in there there're some `js` files. Those 2 are `Node.js` apps, they don't work as you would expect from any other `.js` file.
 You will need to use the command line:
 ```
 luca.sartori@AR-IT12688:~/bootcamps/ui$
@@ -344,7 +401,7 @@ Don't be afraid to Google stuff, no developer remembers everything
 
 → [index](#index)
 
-# Week 2: TypeScript and Angular 101
+# Week 3: TypeScript and Angular 101
 So, here we are. This is the first step into a whole new world. It doesn't matter if it's [Angular](https://angular.io/), [React](https://reactjs.org/), [Vue](https://vuejs.org/) or any `Js` framework. The latest generation of those tools makes the whole development process a breeze.
 Welcome to the SPA world.
 
@@ -352,11 +409,11 @@ Welcome to the SPA world.
 
 Here at Globant we are technology agnostic, every developer is welcomed to study anything he wants. However we do recommend from a maturity and scalabilty points of view `Angular` or `React`.
 
-This Bootcamp will be made around `Angular` that does not mean that you should stop there, if you want to dig into `React` please do, it'll help you in the future.
+This Bootcamp will focus around `Angular` that does not mean that you should stop there, if you want to dig into `React` please do, it'll help you in the future.
 
-**SO**... going back to our business: **`WEEK 2`** - Beginning our project.
+**SO**... going back to our business: **`WEEK 3** - Beginning our project.
 
-## Day 6: TypeScript 101
+## Day 10: TypeScript 101
 
 Let's start with [TypeScript](http://www.typescriptlang.org/),  basically a superset of `Js`, with some advantages
 1. Types
@@ -409,7 +466,7 @@ And there's more and more... but that's for you to read:
 - [Basic Types](http://www.typescriptlang.org/docs/handbook/basic-types.html)
 - [Variable Declarations](http://www.typescriptlang.org/docs/handbook/variable-declarations.html)
 
-## Day 7: Still Ts
+## Day 11: Still Ts
 Get ready, there's a lot where the previous day came from.
 
 ### Reading
@@ -428,7 +485,7 @@ There is no excercise section on these two days because as this is a superset of
 All `Ts` code will be evaluated with `Angular` as that's the language it uses.
 
 
-## Day 8, 9 and 10: Angular 101
+## Day 12, 13 and 14: Angular 101
 So yes, here we are, `Angular`. The **ONE** framework (as they say) you may know it for it's previous generation, the highly important and famous _angular.js_.
 
 _But as they say... water under the bridge._
@@ -467,12 +524,12 @@ Keep in mind:
 
 → [index](#index)
 
-# Week 3: Angular 201
-Things are getting serious, are you ready to dive deep into `Angular`'s architechture?
+# Week 4: Angular 201
+Things are getting serious, are you ready to dive deep into `Angular`?
 
 ![Study](assets/study.gif)
 
-You will learn about the fundamentals, the good ways, the more performant and powerful approaches.
+I'm not gonna lie to you, this is gonna hurt, my friend.
 
 ### Reading:
 - [Architechture](https://angular.io/guide/architecture)
@@ -491,9 +548,6 @@ You will learn about the fundamentals, the good ways, the more performant and po
 - [Router](https://angular.io/guide/router)
 - [Http Client](https://angular.io/guide/http)
 - [Testing](https://angular.io/guide/testing)
-
-### ~~Not So~~ Optional reading
-- [Flexbox - CSS leveled up](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### Exercise:
 
@@ -535,53 +589,19 @@ https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&
 - You can add any feature you like
 - The photo of the day should be a __random__ picture from a __random__ camera
 
-Create a week3-4 folder, go inside and run:
+Create a week4 folder, go inside and run:
 ```
-luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ ng start
+luca.sartori@AR-IT12688:~/bootcamps/ui/week4$ ng start
 ```
 
-**_Hey, don't panic. This excercise is for this week and the next one_**
+**_Hey, don't panic. This excercise is for this week and on..._**
 
-→ [index](#index)
+You have until the last day of this week to keep pushing changes. After that you can keep workin on the app, but please create a new branch for it:
+```
+luca.sartori@AR-IT12688:~/bootcamps/ui/week4$ git checkout -b 'post-bootcamp'
 
-# Week 4: Angular 301 and stuff
-
-So... you've got your `Angular` going, you read a **LOT** of stuff last week, you started a SPA. So... What's next?
-
-![Homer Scholar](assets/homerSquareRoot.gif)
-
-There're still a lot of stuff to read, some of them really work better under specific conditions or requirements. Remember:
-
-_KEEP IT SIMPLE_
-
-If there's a more advanced or complicated way to get to a solution it doesn't always mean that's the better approach.
-
-With that in mind, here are some more advanced _(or not, this **whole** crash course was made by a bored developer on a few days span)_ features that every one should know, and at least being able to explain them. 
-
-### Reading:
-- [Dinamic Component Loader](https://angular.io/guide/dynamic-component-loader)
-- [Animations](https://angular.io/guide/animations)
-- [Reactive Forms](https://angular.io/guide/reactive-forms)
-- [Dynamic Forms](https://angular.io/guide/dynamic-form)
-- [Bootstraping](https://angular.io/guide/bootstrapping)
-- [Dependency Injection](https://angular.io/guide/dependency-injection-pattern)
-- [DI in Angular](https://angular.io/guide/dependency-injection)
-- [Hierarchical DI](https://angular.io/guide/hierarchical-dependency-injection)
-- [DI in Action](https://angular.io/guide/dependency-injection-in-action)
-- [Server Side Rendering](https://angular.io/guide/universal)
-
-### ~~Not So~~ Optional Reading
-- [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
-- [PWAs on Angular](http://www.youtube.com/watch?v=C8KcW1Nj3Mw)
-- [Hybrid Apps](https://developer.telerik.com/featured/what-is-a-hybrid-mobile-app/)
-- [Hybrid Angular Apps - Ionic Framework](https://ionicframework.com/)
-- [Cross Compiled Apps](https://developer.telerik.com/featured/defining-a-new-breed-of-cross-platform-mobile-apps/)
-- [Cross Compiled Apps with Angular - NativeScript](https://www.nativescript.org/)
-- [Cross Compiled Apps with React - React Native](https://facebook.github.io/react-native/)
-
-### Exercise:
-
-As I wrote some lines above, the previous week excercise may also be done on this week.
+luca.sartori@AR-IT12688:~/bootcamps/ui/week4$ git push origin post-bootcamp
+```
 
 Your app should look something like this:
 
@@ -593,13 +613,6 @@ Detail
 
 ![Detail Page](assets/detailResult.jpg)
 
-You have until the last day of this week to keep pushing changes. After that you can keep workin on the app, but please create a new branch for it:
-```
-luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ git checkout -b 'post-bootcamp'
-
-luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ git push origin post-bootcamp
-```
-
 **Some advices**
 - Dont't get scared. Even the most successfull Software Engineers and Architects forget things sometimes.
 - Google is your friend, independence and curiosity are great values that every developer needs to have.
@@ -608,3 +621,31 @@ luca.sartori@AR-IT12688:~/bootcamps/ui/week3-4$ git push origin post-bootcamp
 - Remember, _a happy developer is a great developer_ (_also_, **coffee** is your best friend)
 
 Kudos and keep ~~failing~~ learning!
+
+→ [index](#index)
+
+
+
+# BONUS
+
+So... you've got your `Angular` going, you read a **LOT** of stuff, you started a SPA. So... What's next?
+
+![Homer Scholar](assets/homerSquareRoot.gif)
+
+There're still a lot of stuff to read, some of them really work better under specific conditions or requirements. Remember:
+
+_KEEP IT SIMPLE_
+
+If there's a more advanced or complicated way to get to a solution it doesn't always mean that's the better approach.
+
+With that in mind, here are some more advanced _(or not, this **whole** beatifull mess was made by a bored developer on a few days span)_ features that every one should know, and at least being able to explain them. 
+
+- [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
+- [PWAs on Angular](http://www.youtube.com/watch?v=C8KcW1Nj3Mw)
+- [Hybrid Apps](https://developer.telerik.com/featured/what-is-a-hybrid-mobile-app/)
+- [Hybrid Angular Apps - Ionic Framework](https://ionicframework.com/)
+- [Cross Compiled Apps](https://developer.telerik.com/featured/defining-a-new-breed-of-cross-platform-mobile-apps/)
+- [Cross Compiled Apps with Angular - NativeScript](https://www.nativescript.org/)
+- [Cross Compiled Apps with React - React Native](https://facebook.github.io/react-native/)
+
+Hey, If you need a place to kill time try [Medium](medium.com), there's a lot to read about pretty much anything (specially development related topics). One of my favorites sections is [Angular in depth](https://blog.angularindepth.com/)
