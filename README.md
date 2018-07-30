@@ -384,6 +384,11 @@ First, to understand how node works, you need to learn one last thing about `Js`
 
 Then you can go on with this
 - [Node](http://eloquentjavascript.net/20_node.html)
+
+After that you can learn about the most popular NodeJS framework:
+- [Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Introducing_Express)
+
+### ~~Not So~~ Optional Reading
 - [What is npm?](https://docs.npmjs.com/getting-started/what-is-npm)
 - [Installing npm packages locally](https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
 - [Using a `package.json`](https://docs.npmjs.com/getting-started/using-a-package.json)
@@ -529,6 +534,7 @@ The current stable version is 5.0
 
 ### ~~Not So~~ Optional Reading
 - [Angular CLI](https://github.com/angular/angular-cli)
+- [Angular CLI Schematics](https://blog.angular.io/schematics-an-introduction-dc1dfbc2a2b2)
 
 ### Exercise:
 
