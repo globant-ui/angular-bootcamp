@@ -80,7 +80,7 @@ Four weeks total. (20 days)
 ### Technical Assistance
 
 You can contact other Bootcamp participants or any available tutor if you need
-technical assistance. Communications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Workspace](https://globant-bootcamps2018.slack.com)
+technical assistance. Communications will take place over [Slack](https://slack.com/features) on our own [Bootcamp Workspace](https://glb-angular-bootcamp.slack.com)
 
 → [index](#index)
 
