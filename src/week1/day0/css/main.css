@@ -1,0 +1,603 @@
+@import url(font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+
+
+/*  Reset Stylesheet
+    http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End of HTML5 display-role reset for older browsers */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Mukta', sans-serif;
+    
+
+}
+
+.navbots {
+    display: none;
+}
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+    font-family: FontAwesome;
+}
+
+.icon:hover {
+    color: #5FB404;
+}
+
+.icon > .label {
+    display: none;
+}
+
+.icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Header **********************************************************************************/
+
+.header {
+
+    height: 25vh;
+    text-align: center;
+    background: black;
+    color: white;
+
+}
+
+.header hgroup {
+    padding: 3em 0 2em 0;
+    margin-right: 15vw;
+    font-weight: 700;
+
+}
+
+.header hgroup h1 {
+    font-size: 2.4em;
+    text-transform: uppercase;
+}
+
+.header hgroup h3 {
+    font-size: 1.7em;
+}
+
+.logo img {
+    width: 10em;
+    float: left;
+    margin: 3em 1em 1em 1em;
+}
+
+/* Footer **********************************************************************************/
+
+.footer {
+    font-size: 1em;
+    font-weight: 600;
+    background: gray;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    clear: both;
+    text-align: center;
+    height: 10vh;
+
+}
+
+.footer .copyright {
+    padding: 2em 0 0 0;
+    text-shadow: 1px 1px #000;
+}
+
+/* Content **********************************************************************************/
+
+.content {
+    font-size: 1em;
+    font-weight: 500;
+    float: inherit;
+    background: white;
+    color: #333333;
+    width: 40%;
+    display: inline-block;
+    height: 65vh;
+
+}
+
+.content .fixed {
+    height: auto;
+}
+
+.content article {
+    font-size: 1.2em;
+    padding: 1em 3em 2em 2em;
+}
+
+.content h3 {
+    font-size: 1.1em;
+    text-decoration: underline;
+    padding: 1em 3em 1em 2em;
+
+}
+
+.content h2 {
+    font-size: 2em;
+    text-decoration: underline;
+    padding: 1em 0 0 1em;
+}
+
+.content ul {
+    padding: 0 0 0 3em;
+}
+
+.content .icon {
+    padding: 0 1em 0 0;
+}
+
+.content .footer {
+    background: none;
+    color: black;
+    height: auto;
+}
+
+.content .footer div {
+    padding: 1em 0 1em 0;
+
+}
+
+/* Navigation **********************************************************************************/
+
+.navigation {
+    display: inline-block;
+    width: 20%;
+    font-weight: 600;
+    font-size: 1.4rem;
+
+}
+
+.navigation ul {
+    padding: 2em 1em 1em 1em;
+}
+
+.navigation ul li {
+    padding: 0.5em 0 0 0;
+}
+
+.navigation ul li a {
+    color: #5FB404;
+
+}
+
+.navigation ul li ul {
+    padding: 0 0 0 1em;
+}
+
+.navigation ul li a i {
+    padding: 1em;
+}
+
+.navigation ul li .active {
+    display: none;
+}
+
+.navigation ul li a:hover {
+    color: #333333;
+}
+
+/* Sidebar  **********************************************************************************/
+
+.sidebar {
+    display: inline-block;
+    background: #C5E703;
+    float: right;
+    width: 30%;
+    height: 65vh;
+
+}
+
+.sidebar .content {
+    width: 100%;
+    background: #C5E703;
+    font-size: 1.2em;
+    margin: 1em 0 2em 1em;
+    float: right;
+    height: auto;
+
+}
+
+.sidebar p {
+    margin: 0.5em 1em 1em 1em;
+}
+
+.sidebar footer {
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    float: none;
+    clear: both;
+}
+
+.sidebar h5 {
+    font-size: 2.8rem;
+}
+
+.sidebar h5 {
+    padding: 1em 1em 0em 2em;
+}
+
+.sidebar img {
+    padding: 1em 2em 1em 1em;
+    height: calc(60vw - 50vw);
+    display: inline;
+    float: left;
+}
+.sidebar .icon {
+    color: black;
+}
+
+
+
+
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+
+    .navigation {
+        width: 20%;
+        font-size: 1em;
+        display: inline-block;
+        float: left;
+
+    }
+    .content {
+        width: 50%;
+        height: 65vh;
+        display: inline-block;
+        float: left;
+        font-size: 0.82rem;
+
+    }
+    .sidebar {
+        display: inline-block;
+        float: right;
+        width: 30%;
+    }
+
+    .sidebar .content {
+        font-size: 0.9em;
+    }
+    .sidebar p {
+        padding: 1.1em 1.5em 0.8em 0;
+    }
+    .sidebar footer {
+        padding: 0.5em 0 0.5em 0;
+
+    }
+    .sidebar h5 {
+        font-size: 1.3rem;
+    }
+    .sidebar h5 {
+        padding: 0.8em 0.8em 0em 1.4em;
+    }
+    .sidebar img {
+        padding: 0.8em 1.5em 0.8em 0.8em;
+    }
+}
+
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+
+    .header hgroup h1 {
+        font-size: 1.8em;        
+    }
+    
+    .header hgroup h3 {
+        font-size: 1.2em;
+        }
+    .navigation {
+        width: 20%;
+        font-size: 1.1em;
+        display: inline-block;
+        float: left;
+
+    }
+
+    .navigation ul {
+        padding: 2em 0.5em 0.5em 0.5em;
+    }
+    .navigation ul li ul li {
+        font-size: 0.8em;
+    }
+    .content {
+        width: 80%;
+        display: inline-block;
+        float: right;
+        font-size: 0.9rem;
+        height: 65vh;
+
+    }
+    .content article {
+        font-size: 1.2em;
+        padding: 1em 2em 1em 2em;
+    }
+    .content h3 {
+        font-size: 1.1em;
+        text-decoration: underline;
+        padding: 0.8em 2em 0.8em 1em;
+
+    }
+    .content h2 {
+        font-size: 2em;
+        text-decoration: underline;
+        padding: 0.8em 0 0 0.8em;
+    }
+    .content ul {
+        padding: 0 0 0 3em;
+    }
+    .content .icon {
+        padding: 0 0.5em 0 0;
+    }
+    .content .footer div {
+        padding: 0.5em 0 0.5em 0;
+
+    }
+    .sidebar {
+        display: none;
+        width: 0%;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+
+   
+    
+    .logo img {
+        width: 10em;
+        float: left;
+        margin: 3em 1em 1em 1em;
+    }
+
+    .navigation {
+        width: 20%;
+        font-size: 1.25em;
+        display: initial;
+        float: left;
+
+    }
+    .content {
+        width: 50%;
+        height: 65vh;
+        display: initial;
+        float: left;
+        font-size: 0.9rem;
+
+    }
+    .sidebar {
+        display: initial;
+        float: right;
+        width: 30%;
+    }
+
+    .sidebar .content {
+        font-size: 1.1em;
+    }
+    .sidebar p {
+        padding: 1.1em 1.5em 0.8em 0;
+    }
+    .sidebar footer {
+        padding: 0.5em 0 0.5em 0;
+
+    }
+    .sidebar h5 {
+        font-size: 1.3em;
+    }
+    .sidebar h5 {
+        padding: 0.8em 0.8em 0em 1.4em;
+    }
+    .sidebar img {
+        padding: 0.8em 1.5em 0.8em 0.8em;
+    }
+
+}
+
+form {
+    padding: 2em 1em 1em 1em;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+.gallery iframe{
+    float: left;
+    width: 100%;
+    height: 35vh;
+    display: inline-block;
+}
+
+
+@media (max-width: 674px) {
+    .navbots {
+        display: block;
+    }
+    .navigation {
+        width: 0%;
+        display: none;
+    }
+    .content {
+        width: 100%
+    }
+    .logo img {
+        
+        float: none;    
+        width: 12em;
+        margin: 1em 1em 0em 1em;
+        
+    }
+    .header {
+        height: 28vh;
+
+    }
+    
+    .header hgroup {
+        padding: 1rem 0rem 0.5rem 0rem;
+        font-weight: 700;
+        margin-right: 0;
+    }    
+    .header hgroup h1 {
+        font-size: 1.6em;
+        text-transform: uppercase;
+
+    }    
+    .header hgroup h3 {
+        font-size: 1.1em;
+    }
+    
+
+
+}
