@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Topic</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="title" content="Topic">
+    <link rel="icon" href="img/favicon.ico">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TopicBootcamp">
+    <meta name="author" content="Paola Dueña">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <form action="">
+        <h1> Registration Form </h1>
+        <p> The required fields are with * </p>
+        <fieldset>
+            <legend> Contact information </legend>
+            <label for="firstName">FirstName (*) </label>
+            <input type="text" id="firstName" required minlength="3" maxlength="40">
+
+            <label for="lastName">LastName (*) </label>
+            <input type="text" id="lastName" required minlength="3" maxlength="40">
+
+            <label for="email">Email (*) </label>
+            <input type="email" id="email" size="25" maxlength="100" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend> Registration information</legend>
+
+            <div>
+                <label for="bday">Birthday</label>
+                <input type="date" id="bday">
+            </div>
+
+            <fieldset>
+                <legend>Sports practice? </legend>
+                <label>
+                    <input type="radio" name="yes" value="yes"> Yes</label>
+                <label>
+                    <input type="radio" name="no" value="no"> No </label>
+                <label>
+                    <input type="radio" name="sometimes" value="sometimes"> Sometimes</label>
+            </fieldset>
+
+            <br>
+
+            <label>Favorite sport </label>
+            <select name="sport">
+                <option value="0">Aeróbic</option>
+                <option value="1">Aikido </option>
+                <option value="2">Martial Arts </option>
+                <option value="3">Motoring </option>
+                <option value="4"> Basketball </option>
+                <option value="5">Boxing </option>
+                <option value="6"> Baseball </option>
+                <option value="7"> Cycling </option>
+                <option value="8"> Curling </option>
+                <option value="9"> Football </option>
+                <option value="10"> Golf </option>
+                <option value="11"> Rhythmic gymnastics </option>
+                <option value="12"> Hóckey </option>
+                <option value="13"> Judo </option>
+                <option value="14"> Karate </option>
+                <option value="15"> Kickboxing </option>
+                <option value="16"> Kung Fu </option>
+                <option value="17">Fight </option>
+                <option value="18"> Motorcycling </option>
+                <option value="19"> Motonautics </option>
+                <option value="20"> Swimming </option>
+                <option value="21"> Skydiving </option>
+                <option value="22"> Paragliding </option>
+                <option value="23"> Parkour </option>
+                <option value="24"> Pole </option>
+                <option value="25"> Rowing </option>
+                <option value="26"> Rugby </option>
+                <option value="27"> Skateboard </option>
+                <option value="28"> Snowboard </option>
+                <option value="29"> Surf </option>
+                <option value="30">Tennis </option>
+                <option value="31"> Taekwondo </option>
+                <option value="32"> Volleyball </option>
+                <option value="33"> Windsurf </option>
+            </select>
+
+            <br>
+            <br> Bio
+            <textarea name="texto" rows="4" cols="40" placeholder="write about you"> </textarea>
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Submit" id="submit">
+
+        <input type="reset" value="Reset" id="reset">
+
+    </form>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
