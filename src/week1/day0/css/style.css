@@ -1,0 +1,72 @@
+body{
+   font-size: 14px;
+   font-family: serif;
+}
+
+.container1{
+   display: flex;
+   flex-flow: row;
+}
+
+header{
+   background: black;
+   color: white;
+   text-align: center;
+}
+
+nav{
+   width: 25%;
+   background: orange;
+   color: white;
+}
+
+section{
+   width: 50%;
+   background: lightblue;
+}
+
+article{
+   background: lightgrey;
+}
+
+aside{
+   width: 25%;
+   background: blue;
+   color: white;
+}
+
+footer{
+   text-align: center;
+   background: yellow;
+}
+
+.header{
+   font-size: 46px;
+}
+
+.footer, .sidebar{
+   font-size: 10px;
+}
+
+.navigation{
+   font-size: 12px;
+}
+
+.content *{
+   font-size: 14px;
+}
+
+[class$="r"] {
+   background: magenta;
+}
+
+[class*="a"]:not([class$="r"]){
+   background: blue;
+}
+
+
+
+
+
+
+

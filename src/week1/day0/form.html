@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title> Form </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   </head>
+
+   <body>
+      <header>
+         <h1> Form </h1>
+      </header>
+      <section>
+        <h2> This is sign up form </h2>
+         <form class="signup-form">
+            First name:
+            <input type="text" name="firstname" value=""><br>
+            Last name:
+            <input type="text" name="lastname" value=""><br>
+            Email:
+            <input type="text" name="email" value=""><br>
+            Birthday:
+            <input type="date" name="birthday" value=""><br>
+            <!-- the date input type is not supported in all browsers -->
+            Favourite Sport:
+            <select name="sport">
+               <option value="football">Football</option>
+               <option value="basketball">Basketball</option>
+               <option value="baseball">Baseball</option>
+               <option value="tennis">Tennis</option>
+            </select><br>
+            Small bio:<br>
+            <textarea name="bio" rows="10" cols="30">Something about you </textarea><br>
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>                   
+         </form>
+      </section>
+   </body>
+</html>
+
+
