@@ -93,4 +93,20 @@ console.log(prepend(10, prepend(20, null)));
 console.log(nth(arrayToList([10, 20, 30]), 1));
 
 
+console.log("\nExercise 4");
 
+const deepEqual = (obj1, obj2) => {
+    if( obj1 === obj2) return true;
+    else 
+        if ( Object.keys(obj1).length !=  Object.keys(obj2).length) return false;
+        else
+            for (let key of Object.keys(obj1))
+                if(!deepEqual(obj1[key],obj2[key]) || !Object.keys(obj2).includes(key))
+                    return false;
+            return true;
+}
+
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
