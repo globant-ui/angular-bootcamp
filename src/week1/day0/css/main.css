@@ -607,31 +607,3 @@ form {
 
 }
 
-
-@media (height: 360px) {
-    div {
-        color: red;
-    }
-    .navigation {
-        width: 20%;
-        font-size: 0.75em;
-        display: initial;
-        float: left;
-
-    }
-    .content {
-        width: 50%;
-        height: 65vh;
-        display: initial;
-        float: left;
-        font-size: 0.9rem;
-
-    }
-    .sidebar {
-        display: initial;
-        float: right;
-        width: 30%;
-
-    }
-}
-
