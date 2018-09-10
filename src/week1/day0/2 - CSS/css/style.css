@@ -1,0 +1,69 @@
+header {
+  background-color: #ff0000;
+}
+
+footer {
+  background-color: #0004ff;
+}
+
+aside {
+  background-color: #ff8800;
+}
+
+nav {
+  background-color: #30b110;
+}
+
+html {
+  font-size: 14px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header, footer {
+  text-align: center;
+}
+
+.header {
+  font-size: 46px;
+  height: 15vh;
+}
+
+.footer {
+  font-size: 10px;
+  height: 15vh;
+}
+
+.content {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+}
+
+.navigation {
+  font-size: 12px;
+  width: 25%;
+}
+
+.sidebar {
+  font-size: 10px;
+  width: 25%;
+}
+
+*[class$="r"] {
+  background-color: #ff00ff;
+}
+
+*[class*="a"]:not([class$="r"]) {
+  background-color: blue; 
+}
+
+.central-div {
+  display: flex;
+  height: 70vh;
+}
+
+article {
+  height: -webkit-fill-available;
+}
