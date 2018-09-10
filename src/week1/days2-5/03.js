@@ -58,3 +58,39 @@ console.log(reverseArray(["A", "B", "C"]));
 let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
+
+console.log("\nExercise 3");
+
+
+const arrayToList = (array_in) => {
+    list = null;
+    for(var i = array_in.length-1; i >= 0; i--)
+        list = {value: array_in[i], rest: list};    
+    return list;
+}
+
+
+const listToArray = (list_in) => {
+    let array_out= [];
+    for (let node = list; node; node = node.rest) {
+        array_out.push(node.value);
+    }
+    return array_out;
+}
+
+function prepend(value, list) {
+    return {value, rest: list};
+ }
+
+ function nth(list, position) {    
+    if (position == 0)   return list.value;
+    else return nth (list.rest,position-1);
+}
+
+console.log(arrayToList([10, 20]));
+console.log(listToArray(arrayToList([10, 20, 30])));
+console.log(prepend(10, prepend(20, null)));
+console.log(nth(arrayToList([10, 20, 30]), 1));
+
+
+
