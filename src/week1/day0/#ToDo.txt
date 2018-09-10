@@ -1,3 +1,2 @@
 Fix Favicon.
-The footer doesn't stay in the background.
 Height responsive, now is only width.
