@@ -1,0 +1,2 @@
+Fix Favicon.
+Height responsive, now is only width.
