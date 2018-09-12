@@ -1,9 +1,9 @@
 function reverseArray(array) {
-    let output = [];
+    let salida = [];
     for (let i = array.length - 1; i >= 0; i--) {
-      output.push(array[i]);
+      salida.push(array[i]);
     }
-    return output;
+    return salida;
   }
   
   function reverseArrayInPlace(array) {
