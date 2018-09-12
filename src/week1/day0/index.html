@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet">
+        <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet"> 
+        <link href="/src/week1/day0/style.css" rel="stylesheet">   
+        <title>HTML & CSS</title>
+        <style>
+            body{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: aqua;
+            }
+
+            .header {
+                background-color: magenta;
+                text-align: center;
+                font-size: 100%;
+                
+                height: 100px;
+                position: static;
+               
+                width: 100%;
+            }
+
+            .footer {
+                background-color: magenta;
+                text-align: center;
+                font-size: 10%;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100px;                
+            }
+
+            .aside {
+                background-color: blue;
+                float: right;
+                font-size: 10%;
+                width: 100px;
+	            height: 200px;
+	            padding: 32px;
+	            border-width: 19px;
+            }
+
+            .nav {
+                background-color: blue;
+                float: left;
+                font-size: 12%;
+                width: 300px;
+	            height: 200px;
+	            padding: 32px;
+	            border-width: 19px;
+            }
+
+            .section {
+                background-color: yellow;
+                width: 500px;
+	            height: 300px;
+	            padding: 10px;
+                border-width: 19px;
+                position: fixed;
+                top: 150px;
+                left: 450px;
+                
+            }
+
+            .article {
+                background-color: blue;
+                font-size: 14%;
+                width: 450px;
+	            height: 250px;
+                
+            }
+
+            .prueba {
+                background-color: greenyellow;
+            }
+        </style>
+    </head>
+    
+    <body>
+                
+        <div class="header">
+            <p>Cabecera</p>
+        </div>
+        
+        <div class="nav">
+            <p> el navegador del costado</p>
+        </div>
+
+        <div class="section">
+            <!--
+                <div class="header">
+                    <p> hola </p>
+                </div>
+    
+               
+    
+                <div class="footer">
+                    <p> chau </p>
+                </div>
+            -->
+                <div class="article">
+                        <p>Articulo</p>
+                    </div>    
+        </div>
+      
+
+        <div class="aside">
+            <p> el otro costado</p>
+        </div>
+
+        <div class="footer">
+            <p>My best friend is Mickey.</p>
+        </div>
+
+        <div class="oh-no-inline-styles" style="background:red">
+            <div class="prueba"><p>PRUEBA</p></div>
+        </div>
+        
+    </body>
+</html>
+        
