@@ -1,0 +1,30 @@
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14%;
+}
+
+header.center{
+    background-color: red;
+    text-align: center;
+    font-size: 46%;
+}
+
+.footer{
+    background-color: hotpink;
+    text-align: center;
+    font-size: 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav{
+    background-color: blue;
+    font-size: 12%;
+}
+
+.aside{
+    background-color: aquamarine;
+    font-size: 10%;
+}
+section, article{
+    color: aqua;
+}
