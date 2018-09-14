@@ -1,18 +1,90 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
 
-<!-- Now it's your turn to make some changes
-    - Draw some buttons, make your way between the click events and let me know they are pressed
-    - What other events are you familiar with? Show it
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****      keep me informed of the pointer's     ****
-    ****      position, make it show on screen      ****
-    ****************************************************
--->
+<!doctype html>
+<html>
+<head>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <h1>Welcome</h1>
+        <br/>
+        <hr/>
+        <button id="reset">Reset the world</button>
+        <button id="abort" style="display: none;">Abort</button>
+
+        <hr/>
+        <div>
+            <h1 id="time"></h1>
+            <p id="console"></p>
+        </div>
+        <div id="error" style="display: none;">
+            <h2>Error!</h2>
+            <p>Sorry, we cant reset the world today.</p>
+        </div>
+
+    </div>
+    <script>
+        var abort = 0;
+        function countdown(timer) {
+            document.getElementById("reset").style.display = "none";
+            document.getElementById("abort").style.display = "initial";            
+            var intervalId = setInterval(function () {
+
+                var display = document.getElementById('time');
+
+                if (abort != 0) {
+                    clearInterval(intervalId);
+                } else {
+                    if (display.textContent && display.textContent != 0) {
+                        if (document.getElementById("time").style.display == "none")
+                            document.getElementById("time").style.display = "initial";
+                        if (display.textContent > 1)
+                            display.textContent = display.textContent - 1;
+                        else {
+                            clearInterval(intervalId);
+                            displayError();
+                        }
+                    }
+                    else display.textContent = timer;
+                }
+
+            }, 1000);
+        };
+        function displayError() {
+            document.getElementById("error").style.display = "initial";
+            document.getElementById("time").style.display = "none";
+            document.getElementById("abort").style.display = "none";
+            tryAgain();
+
+        };
+        function abortMission() {
+            abort = 1;
+            document.getElementById('console').innerHTML = "Thanks for not reset the world";
+            tryAgain();
+
+        };
+        function tryAgain() {
+            if (!document.getElementById("tryAgain")) {
+                var tryAgain = document.createElement("BUTTON");
+                var text = document.createTextNode("Try Again");
+                tryAgain.id = "tryAgain";
+                tryAgain.onclick = function () {
+                    location.reload();
+                };
+                tryAgain.appendChild(text);
+                document.body.appendChild(tryAgain);
+            }else{
+                document.getElementById('tryAgain').style.display = "initial";
+            }
+        }
+     
+        document.getElementById("reset").addEventListener("click", function () { countdown(5); }, false);
+        document.getElementById("abort").addEventListener("click", function () { abortMission() }, false);          
+
+    </script>
+</body>
+
+</html>

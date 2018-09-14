@@ -1,10 +1,149 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
+
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .checked {
+            color: red;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <h1>Welcome</h1>
+        <br/>
+        <hr/>
+        <button id="reset">Reset the world</button>
+        <button id="abort" style="display: none;">Abort</button>
+
+        <hr/>
+        <div>
+            <h1 id="time"></h1>
+            <p id="console"></p>
+            
+        </div>
+        <div id="error" style="display: none;">
+            <h2>Error!</h2>
+            <p>Sorry, we cant reset the world today.</p>
+        </div><br/>
+        <h3>We recommend checking this list before proceeding</h3>
+        <ul id="things" style="text-align:left; padding-left: 45%;">
+            <li id="1">Plant a tree</li>
+            <li id="2">Pay bills</li>
+            <li id="3">Meet Ariel</li>
+            <li id="4">Read a book</li>
+            <li id="5"class="checked" id="lastItem">Visit this site</li>
+            
+        </ul>
+        <form action="javascript:;" onsubmit="addItem(this)">
+                Add other: <input type="text" name="itemToAdd"><br>
+                <br/>
+                <input type="submit" value="Submit">
+            </form>
+
+    </div>
+    <script>
+
+        var abort = 0;
+        var listContentCounter = 5;
+        /*
+           window.onload = () => {
+               if (confirm("This is a place for responsible people. R you sure to take the responsibility to open this site?")) {
+                   txt = "I don't think so, but... let's go.";
+               } else {
+                   txt = "Thank u for being honest, we will let in you anyway";
+               }
+               alert(txt)
+           };*/
+        function addItem(formItem) {
+            var newItem = document.createElement("LI");
+            var text =  document.createTextNode(formItem.itemToAdd.value);
+            newItem.id=++listContentCounter;
+            newItem.onclick = function (){ document.getElementById(listContentCounter).className = "checked"; };
+            newItem.appendChild(text);
+            document.getElementById("things").appendChild(newItem);
+
+        };
+        function countdown(timer) {
+            document.getElementById("reset").style.display = "none";
+            document.getElementById("abort").style.display = "initial";
+            var intervalId = setInterval(function () {
+
+                var display = document.getElementById('time');
+
+                if (abort != 0) {
+                    clearInterval(intervalId);
+                } else {
+                    if (display.textContent && display.textContent != 0) {
+                        if (document.getElementById("time").style.display == "none")
+                            document.getElementById("time").style.display = "initial";
+                        if (display.textContent > 1)
+                            display.textContent = display.textContent - 1;
+                        else {
+                            clearInterval(intervalId);
+                            displayError();
+                        }
+                    }
+                    else display.textContent = timer;
+                }
+
+            }, 1000);
+        };
+        function displayError() {
+            document.getElementById("error").style.display = "initial";
+            document.getElementById("time").style.display = "none";
+            document.getElementById("abort").style.display = "none";
+            tryAgain();
+
+        };
+        function abortMission() {
+            abort = 1;
+            document.getElementById('error').innerHTML = "Thanks for not reset the world";
+            tryAgain();
+
+        };
+        function tryAgain() {
+            if (!document.getElementById("tryAgain")) {
+                var tryAgain = document.createElement("BUTTON");
+                var text = document.createTextNode("Try Again");
+                tryAgain.id = "tryAgain";
+                tryAgain.onclick = function () {
+                    location.reload();
+                };
+                tryAgain.appendChild(text);
+                document.getElementById("console").appendChild(tryAgain);
+            } else {
+                document.getElementById('tryAgain').style.display = "initial";
+            }
+        }
+
+        document.getElementById("reset").addEventListener("click", function () { countdown(5); }, false);
+        document.getElementById("abort").addEventListener("click", function () { abortMission(); }, false);
+        var itemList = document.getElementsByTagName("LI");
+        function changeClass (actualElementId){
+            console.log(actualElementId);
+            document.getElementById(actualElementId).style.display = "none";
+        };
+        // #ToDo: for loop for do this
+        document.getElementById("1").addEventListener("click", function () { document.getElementById("1").className = "checked"; }, false);
+        document.getElementById("2").addEventListener("click", function () { document.getElementById("2").className = "checked"; }, false);
+        document.getElementById("3").addEventListener("click", function () { document.getElementById("3").className = "checked"; }, false);
+        document.getElementById("4").addEventListener("click", function () { document.getElementById("4").className = "checked"; }, false);
+        document.getElementById("5").addEventListener("click", function () { document.getElementById("5").className = "checked"; }, false);
+
+        
+       
+
+    </script>
+</body>
+
+</html>
+
 
 <!-- Now it's your turn to make some changes
     - Add at least 2 DOM elements, via code, DOH

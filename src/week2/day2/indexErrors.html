@@ -3,22 +3,33 @@
 <script>
     (function(){
         "use strict";
-        var willPass = "Hi there";
-        wontPass = "nope";
-
+        let willPass = "Hi there";
+        let wontPass = "nope";
         console.log(`willPass = ${willPass}`);
         console.log(`wontPass = ${wontPass}`);
 
         let someArr = [1, 2, 3, 4];
 
+        function check_array(array){
+            if (typeof someArr == "undefined" || someArr.length == 0 )
+                throw new Error("The array has no content or is undefined");
+            return true;
+        }
+
         function giveMe(inx) {
-            return someArr[counter];
+            if (!check_array(someArr))  return;
+            if (inx >= 0 && typeof inx != "undefined" )
+                return someArr[inx];
+            else
+                throw new Error("Index of the array is wrong ");
         }
 
-        for (let counter= 0; counter <= someArr.length; counter++) {
-            console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+        if (check_array(someArr))
+            for (let counter= 0; counter < someArr.length; counter++) {
+                console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
         }
-
+    
+            
         console.log("The code continues");
     })()
 </script>
