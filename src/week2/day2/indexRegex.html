@@ -4,17 +4,28 @@ inside developer tools -->
     (function(){
         "use strict";
         // This will always pass
-        var emailRegex = new RegExp(),
-            result = prompt("Enter Your email", ""),
-            valid = result.match(emailRegex);
-
-        if (valid) {
-            alert("Email valid");
-            console.log(`You entered: ${result}`);
-        } else {
-            alert("Email not valid");
-            console.warn(`You entered: ${result} which is not an email`);
+        var valid = false;
+        const emailRegexStr = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+        while(!valid){
+            var emailRegex = new RegExp(),            
+                result = prompt("Enter Your email", ""),              
+                valid = result.match(emailRegexStr);
+            
+                
+            if (valid) {
+                alert("Email valid");
+                console.log(`You entered: ${result}`);
+            } else {
+                alert("Email not valid");
+                console.warn(`You entered: ${result} which is not an email`);
+            }
         }
+        console.log("Your username is : ", result.split(/@/)[0]);
+        console.log("Your mail client company is : ",result.split(/[.\@]/)[1]);
+        const companyName = /globant/;
+        if(companyName.test(result.split(/[.\@]/)[1]))
+            console.log("Thanks for using the company email service");
+     
     })()
 </script>
 

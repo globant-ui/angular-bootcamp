@@ -1,18 +1,101 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
 
-<!-- Now it's your turn to make some changes
-    - Draw some buttons, make your way between the click events and let me know they are pressed
-    - What other events are you familiar with? Show it
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****      keep me informed of the pointer's     ****
-    ****      position, make it show on screen      ****
-    ****************************************************
--->
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .btn {
+            width: 15%;
+            height: 4em;
+        }
+
+        #mousePos {
+            padding-top: 4em;
+        }
+        .score{
+            padding: 1em 1em 1em 1em;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div>
+        <h1>Welcome</h1>
+        <div id="btn1-box">
+            <button id="btn1" class="btn"><strong>Button 1</strong></button>
+            <br/>
+            <div id="btn1data"></div>
+            <br/>
+        </div>
+        <br/>
+        <div id="btn2-box">
+            <button id="btn2" class="btn"><strong>Button 2</strong></button>
+            <br/>
+            <div id="btn2data"></div>
+            <br/>
+        </div>
+        <div id="score">
+            <hgroup>
+                <h4>Score</h4>
+                <h1><span class="score"  id="score1">0</span>-<span class="score" id="score2">0</span></h1>
+                <h5>Button 1 vs Button 2</h5>
+            </hgroup>
+        </div>
+        <div id="mousePos">
+
+            <strong>
+                <span id=mousePosX></span><br/>
+                <span id=mousePosY></span><br/>
+                <span id=mouseClic></span><br/>
+            </strong>
+        </div>
+    </div>
+    <script>
+
+        document.addEventListener("mousemove", (event) => {
+
+            document.getElementById("mousePosX").innerHTML = "Mouse Position X: " + event.clientX;
+            document.getElementById("mousePosY").innerHTML = "Mouse Position Y: " + event.clientY;
+
+        });
+
+        document.addEventListener("click", (event) => {
+            document.getElementById("mouseClic").innerHTML = "Mouse Clicked at " + event.clientX + " : " + event.clientY;
+        });
+
+        document.getElementById("btn1").addEventListener("mouseover", (event) => {
+            document.getElementById("btn1data").innerHTML = "Mouse Over Boton 1 ";
+        });
+        document.getElementById("btn1").addEventListener("click", (event) => {
+            document.getElementById("btn1data").innerHTML += "<br/>Boton 1 Clicked";
+            var score = document.getElementById("score1").innerHTML;
+            score++;
+            document.getElementById("score1").innerHTML = score;
+        });
+        document.getElementById("btn1").addEventListener("mouseout", (event) => {
+            document.getElementById("btn1data").innerHTML = "Mouse Out of Boton 1 ";
+        });
+
+        document.getElementById("btn2").addEventListener("mouseover", (event) => {
+            document.getElementById("btn2data").innerHTML = "Mouse Over Boton 1 ";
+        });
+        document.getElementById("btn2").addEventListener("click", (event) => {
+            document.getElementById("btn2data").innerHTML += "<br/>Boton 1 Clicked";
+            var score = document.getElementById("score2").innerHTML;
+            score++;
+            document.getElementById("score2").innerHTML = score;
+        });
+        document.getElementById("btn2").addEventListener("mouseout", (event) => {
+            document.getElementById("btn2data").innerHTML = "Mouse Out of Boton 1 ";
+        });
+    </script>
+</body>
+
+</html>
