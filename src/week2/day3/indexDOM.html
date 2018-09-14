@@ -51,7 +51,7 @@
 
         var abort = 0;
         var listContentCounter = 5;
-        /*
+        
            window.onload = () => {
                if (confirm("This is a place for responsible people. R you sure to take the responsibility to open this site?")) {
                    txt = "I don't think so, but... let's go.";
@@ -59,7 +59,7 @@
                    txt = "Thank u for being honest, we will let in you anyway";
                }
                alert(txt)
-           };*/
+        };
         function addItem(formItem) {
             var newItem = document.createElement("LI");
             var text =  document.createTextNode(formItem.itemToAdd.value);
@@ -103,6 +103,7 @@
         };
         function abortMission() {
             abort = 1;
+            displayError();
             document.getElementById('error').innerHTML = "Thanks for not reset the world";
             tryAgain();
 

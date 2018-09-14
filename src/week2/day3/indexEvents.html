@@ -4,86 +4,97 @@ inside developer tools -->
 
 <!doctype html>
 <html>
+
 <head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .btn {
+            width: 15%;
+            height: 4em;
+        }
+
+        #mousePos {
+            padding-top: 4em;
+        }
+        .score{
+            padding: 1em 1em 1em 1em;
+        }
+    </style>
 </head>
 
-<body style="text-align: center;">
+<body id="body">
     <div>
         <h1>Welcome</h1>
+        <div id="btn1-box">
+            <button id="btn1" class="btn"><strong>Button 1</strong></button>
+            <br/>
+            <div id="btn1data"></div>
+            <br/>
+        </div>
         <br/>
-        <hr/>
-        <button id="reset">Reset the world</button>
-        <button id="abort" style="display: none;">Abort</button>
-
-        <hr/>
-        <div>
-            <h1 id="time"></h1>
-            <p id="console"></p>
+        <div id="btn2-box">
+            <button id="btn2" class="btn"><strong>Button 2</strong></button>
+            <br/>
+            <div id="btn2data"></div>
+            <br/>
         </div>
-        <div id="error" style="display: none;">
-            <h2>Error!</h2>
-            <p>Sorry, we cant reset the world today.</p>
+        <div id="score">
+            <hgroup>
+                <h4>Score</h4>
+                <h1><span class="score"  id="score1">0</span>-<span class="score" id="score2">0</span></h1>
+                <h5>Button 1 vs Button 2</h5>
+            </hgroup>
         </div>
+        <div id="mousePos">
 
+            <strong>
+                <span id=mousePosX></span><br/>
+                <span id=mousePosY></span><br/>
+                <span id=mouseClic></span><br/>
+            </strong>
+        </div>
     </div>
     <script>
-        var abort = 0;
-        function countdown(timer) {
-            document.getElementById("reset").style.display = "none";
-            document.getElementById("abort").style.display = "initial";            
-            var intervalId = setInterval(function () {
 
-                var display = document.getElementById('time');
+        document.addEventListener("mousemove", (event) => {
 
-                if (abort != 0) {
-                    clearInterval(intervalId);
-                } else {
-                    if (display.textContent && display.textContent != 0) {
-                        if (document.getElementById("time").style.display == "none")
-                            document.getElementById("time").style.display = "initial";
-                        if (display.textContent > 1)
-                            display.textContent = display.textContent - 1;
-                        else {
-                            clearInterval(intervalId);
-                            displayError();
-                        }
-                    }
-                    else display.textContent = timer;
-                }
+            document.getElementById("mousePosX").innerHTML = "Mouse Position X: " + event.clientX;
+            document.getElementById("mousePosY").innerHTML = "Mouse Position Y: " + event.clientY;
 
-            }, 1000);
-        };
-        function displayError() {
-            document.getElementById("error").style.display = "initial";
-            document.getElementById("time").style.display = "none";
-            document.getElementById("abort").style.display = "none";
-            tryAgain();
+        });
 
-        };
-        function abortMission() {
-            abort = 1;
-            document.getElementById('console').innerHTML = "Thanks for not reset the world";
-            tryAgain();
+        document.addEventListener("click", (event) => {
+            document.getElementById("mouseClic").innerHTML = "Mouse Clicked at " + event.clientX + " : " + event.clientY;
+        });
 
-        };
-        function tryAgain() {
-            if (!document.getElementById("tryAgain")) {
-                var tryAgain = document.createElement("BUTTON");
-                var text = document.createTextNode("Try Again");
-                tryAgain.id = "tryAgain";
-                tryAgain.onclick = function () {
-                    location.reload();
-                };
-                tryAgain.appendChild(text);
-                document.body.appendChild(tryAgain);
-            }else{
-                document.getElementById('tryAgain').style.display = "initial";
-            }
-        }
-     
-        document.getElementById("reset").addEventListener("click", function () { countdown(5); }, false);
-        document.getElementById("abort").addEventListener("click", function () { abortMission() }, false);          
+        document.getElementById("btn1").addEventListener("mouseover", (event) => {
+            document.getElementById("btn1data").innerHTML = "Mouse Over Boton 1 ";
+        });
+        document.getElementById("btn1").addEventListener("click", (event) => {
+            document.getElementById("btn1data").innerHTML += "<br/>Boton 1 Clicked";
+            var score = document.getElementById("score1").innerHTML;
+            score++;
+            document.getElementById("score1").innerHTML = score;
+        });
+        document.getElementById("btn1").addEventListener("mouseout", (event) => {
+            document.getElementById("btn1data").innerHTML = "Mouse Out of Boton 1 ";
+        });
 
+        document.getElementById("btn2").addEventListener("mouseover", (event) => {
+            document.getElementById("btn2data").innerHTML = "Mouse Over Boton 1 ";
+        });
+        document.getElementById("btn2").addEventListener("click", (event) => {
+            document.getElementById("btn2data").innerHTML += "<br/>Boton 1 Clicked";
+            var score = document.getElementById("score2").innerHTML;
+            score++;
+            document.getElementById("score2").innerHTML = score;
+        });
+        document.getElementById("btn2").addEventListener("mouseout", (event) => {
+            document.getElementById("btn2data").innerHTML = "Mouse Out of Boton 1 ";
+        });
     </script>
 </body>
 
