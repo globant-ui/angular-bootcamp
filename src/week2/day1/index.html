@@ -1,28 +1,66 @@
 <!-- Take this file and open it on a browser, then open the console
-    inside developer tools -->
+inside developer tools -->
 <script>
-    var Animal = (function(type) {
-        this.type = type;
-    });
+   var Animal = (function(type, weight, height) {
+      this.type = type;
+      this.weight = weight;
+      this.height = height;
+   });
 
-    Animal.prototype.talk = function() {
-        console.log(`Hi, I'm an Animal, but also a ${this.type}`);
-    };
+   Object.defineProperty(Animal.prototype, 'tipo', {
+      get: function () {
+         return this.type;
+      },
+      set: function (value) {
+         this.type = value;
+      }
+   });
 
-    let rabbit = new Animal("Rabbit");
-    rabbit.talk();
+   Animal.prototype.talk = function() {
+      console.log(`Hi, I'm an Animal, but also a ${this.type}`);
+   };
+
+   Animal.prototype.jump = function() {
+      console.log(`The ${this.type} is jumping, weighing ${this.weight}`);
+   }
+
+   Animal.prototype.stretch = function(){
+      console.log(`The ${this.type} with ${this.height} is stretching`);
+   }
+
+   let rabbit = new Animal("Rabbit", "30kg", "120cm");
+   rabbit.talk();
+   rabbit.jump();
+   rabbit.stretch();
+
+   var Dog = (function(weight, height) {
+      this.weight = weight;
+      this.height = height;
+   });
+   
+   Dog.prototype = Object.create(new Animal("Dog"));
+   
+   Dog.prototype.talk = function() {
+      console.log(`I'm a ${this.type} and I bark`);
+   }
+   
+   let dog = new Dog("40kg", "150cm");
+   dog.talk();
+   dog.jump();
+   dog.stretch();
+   
 </script>
 
 <!-- Now it's your turn to make some changes
-    - Refactor the previous code to use getters and settters
-    - Add at least 2 more properties
-    - Add at least 2 more methods
-    - Create a new class that inherits from Animal
-    - Override one of the methods you previously defined
+- Refactor the previous code to use getters and settters
+- Add at least 2 more properties
+- Add at least 2 more methods
+- Create a new class that inherits from Animal
+- Override one of the methods you previously defined
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****      MAKE A 2nd VERSION USING ES6 CLASSES  ****
-    ****                                            ****
-    ****************************************************
+****************************************************
+****               BONUS POINTS                 ****
+****      MAKE A 2nd VERSION USING ES6 CLASSES  ****
+****                                            ****
+****************************************************
 -->

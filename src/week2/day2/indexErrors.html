@@ -1,36 +1,61 @@
 <!-- Take this file and open it on a browser, then open the console
-    inside developer tools -->
+inside developer tools -->
 <script>
-    (function(){
-        "use strict";
-        var willPass = "Hi there";
-        wontPass = "nope";
+   class IndexError extends Error {}
+   class EmptyArray extends Error {} 
+   
+   (function(){
+      "use strict";
+      var willPass = "Hi there";
+      var wontPass = "nope";
 
-        console.log(`willPass = ${willPass}`);
-        console.log(`wontPass = ${wontPass}`);
+      console.log(`willPass = ${willPass}`);
+      console.log(`wontPass = ${wontPass}`);
 
-        let someArr = [1, 2, 3, 4];
+      let someArr = [1, 2, 3, 4];
 
-        function giveMe(inx) {
-            return someArr[counter];
-        }
+      function giveMe(inx) {
+         if(inx<0 || inx>someArr.length-1)
+            throw new IndexError();
+         return someArr[inx];
+      }
 
-        for (let counter= 0; counter <= someArr.length; counter++) {
-            console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
-        }
+      function printArray(){
+         if (someArr.length == 0) {
+            throw new EmptyArray();
+         } 
+         for (let counter= 0; counter < someArr.length; counter++) {
+            try{
+               console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+            } catch(e){
+               if(e instanceof IndexError)
+                  console.log("Index out of range");
+               else
+                  throw e;
+            }
+         }
+      }
+      
+      
+      
+      /* 
+         The function that calls printArray() must catch EmptyArray and Error 
+         In this case, exceptions are handled with console.log, it would be better to use another way to proceed
+      */
+      printArray();
 
-        console.log("The code continues");
-    })()
+      console.log("The code continues");
+   })()
 </script>
 
 <!-- Now it's your turn to make some changes
-    - Refactor the previous code to make it work
-    - Add some kind of failsafe to never get an undefined while accessing the array
-    - Do an Assertion
+- Refactor the previous code to make it work
+- Add some kind of failsafe to never get an undefined while accessing the array
+- Do an Assertion
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****  Investigate about other console methods   ****
-    ****       and give me some kind of demo        ****
-    ****************************************************
+****************************************************
+****               BONUS POINTS                 ****
+****  Investigate about other console methods   ****
+****       and give me some kind of demo        ****
+****************************************************
 -->

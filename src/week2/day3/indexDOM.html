@@ -1,18 +1,86 @@
 <!-- Take this file and open it on a browser, then open the console
-    inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
+inside developer tools -->
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+   <head>
+      <meta charset="utf-8">
+      <title> My page </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   </head>
+
+   <body>
+      <header>
+
+      </header>
+      <div class="paragraph-container">
+
+      </div>
+
+   </body>
+
+   <script>
+      function addParagraphs(cantElements){
+         var paragraphContainer = document.getElementsByClassName("paragraph-container");
+         for(let i = 0; i<cantElements; i++){
+            let paragraph = document.createElement("p");
+            let paragraph__text = document.createTextNode("This is paragraph number [" + (i+1) + "]");
+            paragraph.appendChild(paragraph__text);
+            paragraphContainer[0].appendChild(paragraph);
+         }
+      }
+
+      (function(){
+         "use strict";
+         var mainHeader = document.createElement("h1");
+         var mainHeader__text = document.createTextNode("[Main Title]");
+         mainHeader.appendChild(mainHeader__text);
+
+         var secondaryHeader = document.createElement("h2");
+         var secondaryHeader__text = document.createTextNode("[Secondary Title]");
+         secondaryHeader.appendChild(secondaryHeader__text);
+
+         var pageHeaders = document.getElementsByTagName("header");
+         pageHeaders[0].appendChild(mainHeader);
+         pageHeaders[0].appendChild(secondaryHeader);
+
+         var addElementsButton = document.createElement("button");
+         var addElementsButton__text = document.createTextNode("Add elements");
+         addElementsButton.appendChild(addElementsButton__text);
+
+         addElementsButton.addEventListener("click", () => {
+            const maxElements = 50;
+            var readElements = prompt("Write a number less than " + maxElements + " to add paragraphs");
+            var cantElements = parseInt(readElements,10);
+            if (!isNaN(cantElements)) {
+               if (cantElements <= maxElements) {
+                  addParagraphs(cantElements);
+               } else {
+                  alert("I told you less than " + maxElements + " :(");
+               }
+            } else {
+               alert("I told you a number :(");
+            }
+         });         
+
+         document.body.appendChild(addElementsButton);
+
+
+      })()
+
+   </script>
+
+</html>
+
 
 <!-- Now it's your turn to make some changes
-    - Add at least 2 DOM elements, via code, DOH
-    - Make a button, ask a quantity and add those elements
+- Add at least 2 DOM elements, via code, DOH
+- Make a button, ask a quantity and add those elements
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****  Keep it funny, make a list, do a drawing  ****
-    ****      show me you can dominate the DOM      ****
-    ****************************************************
+****************************************************
+****               BONUS POINTS                 ****
+****  Keep it funny, make a list, do a drawing  ****
+****      show me you can dominate the DOM      ****
+****************************************************
 -->

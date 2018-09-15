@@ -1,29 +1,65 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
 <script>
-    (function(){
-        "use strict";
-        // This will always pass
-        var emailRegex = new RegExp(),
-            result = prompt("Enter Your email", ""),
-            valid = result.match(emailRegex);
+   (function(){
+      "use strict";
+      // This will always pass
+      var emailRegex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/),
+          result = prompt("Enter Your email", ""),
+          valid = result.match(emailRegex);
 
-        if (valid) {
-            alert("Email valid");
-            console.log(`You entered: ${result}`);
-        } else {
-            alert("Email not valid");
-            console.warn(`You entered: ${result} which is not an email`);
-        }
-    })()
+      if (valid) {
+         alert("Email valid");
+         console.log(`You entered: ${result}`);
+      } else {
+         alert("Email not valid");
+         console.warn(`You entered: ${result} which is not an email`);
+      }
+   })()
 </script>
 
 <!-- Now it's your turn to make some changes
-    - Make a proper regex so the code works as expected
+- Make a proper regex so the code works as expected
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****    Show me something funny with a regex    ****
-    ****           use your imagination             ****
-    ****************************************************
+****************************************************
+****               BONUS POINTS                 ****
+****    Show me something funny with a regex    ****
+****           use your imagination             ****
+****************************************************
+-->
+
+<!--
+
+Before @
+1)
+   Letters
+   Numbers
+   Symbols !#$%&'*+-/=?^_`{|}~
+   [One or more occurrences]
+   
+2)
+   : \ . 
+   Letters
+   Numbers
+   Symbols !#$%&'*+/=?^_`{|}~-
+   [Optional group] [Zero or more ocurrences]
+   
+3)
+   @
+
+After @
+4)
+   Letters
+   Numbers
+   Letters and numbers combination [Optional] with \ . [One or more occurrences]
+   [Optional group]
+
+5)
+   Letters
+   Numbers
+   Letters and numbers combination [Optional][One or more occurrences]
+
+ 
+RFC Standard 2822 
+/^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/
 -->
