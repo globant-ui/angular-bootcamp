@@ -1,0 +1,61 @@
+<!-- Now it's your turn to make some changes
+    - Refactor the previous code to use getters and settters
+    - Add at least 2 more properties
+    - Add at least 2 more methods
+    - Create a new class that inherits from Animal
+    - Override one of the methods you previously defined
+
+    ****************************************************
+    ****               BONUS POINTS                 ****
+    ****      MAKE A 2nd VERSION USING ES6 CLASSES  ****
+    ****                                            ****
+    ****************************************************
+-->
+
+<script>
+  class Animal {
+    constructor(type, name, age) {
+      this.type = type;
+      this.name = name;
+      this.age = age;
+    }
+
+    get getType() {
+      return this.type;
+    }
+
+    set setType(newType) {
+      this.type = newType;
+    }
+
+    talk() {
+      console.log(`Hi, I'm an Animal, but also a ${this.type}`);
+    }
+
+    eat() {
+      console.log(`Hi! I'm ${this.name} the ${this.type}, and I'm getting fat.`);
+    }
+
+    sleep() {
+      console.log(`Don't disturb ${this.name}, it's sleeping...`);
+    }
+  }
+
+  class Giraffe extends Animal {
+    constructor(name, age) {
+      super("Giraffe", name, age);
+    }
+
+    talk() {
+      console.log("Uhm... I think giraffes don't talk :/");
+    }
+  }
+
+  let donald = new Animal("Duck", "Donald", "84");
+  donald.talk();
+  donald.eat();
+  donald.sleep();
+
+  let melman = new Giraffe("Melman", "15");
+  melman.talk();
+</script>

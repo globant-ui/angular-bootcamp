@@ -1,10 +1,11 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    (function(){
+    (function () {
         "use strict";
-        var willPass = "Hi there";
-        wontPass = "nope";
+        let willPass = "Hi there";
+        let wontPass = "nope";
+        let counter = 0;
 
         console.log(`willPass = ${willPass}`);
         console.log(`wontPass = ${wontPass}`);
@@ -12,11 +13,26 @@
         let someArr = [1, 2, 3, 4];
 
         function giveMe(inx) {
-            return someArr[counter];
+            if (inx < 0 || inx >= someArr.length)
+                throw new Error('Index is out of bounds');
+            else if (typeof inx == "undefined")
+                throw new Error('Index is undefined');
+            return someArr[inx];
         }
 
-        for (let counter= 0; counter <= someArr.length; counter++) {
-            console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+        function isValid(arr) {
+            if (typeof (arr) == "undefined")
+                throw new Error('Array is empty or undefined');
+            if (arr.length <= 0)
+                throw new Error('Array is empty');
+            return true;
+        }
+
+
+        if (isValid(someArr)) {
+            for (let counter = 0; counter < someArr.length; counter++) {
+                console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+            }
         }
 
         console.log("The code continues");
