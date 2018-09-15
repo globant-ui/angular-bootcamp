@@ -1,28 +1,60 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    var Animal = (function(type) {
+
+    // Add at least 2 more properties
+    var Animal = (function (type, name, age) {
         this.type = type;
+        this.name = name;
+        this.age = age;
     });
 
-    Animal.prototype.talk = function() {
+    //  Refactor the previous code to use getters and settters
+    Object.defineProperty(Animal.prototype, 'myName', {
+        get: function () {
+            return this.name;
+        },
+        set: function (value) {
+            this.name = value;
+        }
+    });
+
+    Animal.prototype.talk = function () {
         console.log(`Hi, I'm an Animal, but also a ${this.type}`);
     };
 
+    // Add at least 2 more methods
+    Animal.prototype.eat = function () {
+        console.log(`Hi! I'm ${this.name} the ${this.type}, and I'm getting fat.`);
+    }
+
+    Animal.prototype.sleep = function () {
+        console.log(`Don't disturb ${this.name}, it's sleeping...`);
+    }
+
     let rabbit = new Animal("Rabbit");
     rabbit.talk();
+
+    let rogerRabbit = new Animal("Rabbit", "Roger", "5");
+    rogerRabbit.talk();
+    rogerRabbit.eat();
+    rogerRabbit.sleep();
+
+    // Create a new class that inherits from Animal
+    function Cat(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    Cat.prototype = Object.create(new Animal("Cat"));
+
+    // Override one of the methods you previously defined
+    Cat.prototype.talk = function () {
+        console.log(`Meow! I'm ${this.name}, the cat!`);
+    }
+
+    let garfield = new Cat("Garfield", "4");
+    garfield.talk();
+
+
 </script>
-
-<!-- Now it's your turn to make some changes
-    - Refactor the previous code to use getters and settters
-    - Add at least 2 more properties
-    - Add at least 2 more methods
-    - Create a new class that inherits from Animal
-    - Override one of the methods you previously defined
-
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****      MAKE A 2nd VERSION USING ES6 CLASSES  ****
-    ****                                            ****
-    ****************************************************
--->

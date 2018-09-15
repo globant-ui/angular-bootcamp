@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/lsartori94/globant-bootcamps-ui/issues"
   },
-  "homepage": "https://github.com/lsartori94/globant-bootcamps-ui#readme"
+  "homepage": "https://github.com/lsartori94/globant-bootcamps-ui#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

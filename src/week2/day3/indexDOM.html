@@ -1,10 +1,69 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Body will be added via JS -->
+
+    <script>
+        (function () {
+            "use strict";
+            var siteTitle = document.createElement("h1");
+            var siteTitleText = document.createTextNode("This is a JS added title");
+            var siteSubtitle = document.createElement("h5");
+            var siteSubtitleText = document.createTextNode("...and it works!")
+
+            //Add at least 2 DOM elements, via code, DOH
+            siteTitle.appendChild(siteTitleText);
+            document.body.appendChild(siteTitle);
+            siteSubtitle.appendChild(siteSubtitleText);
+            siteSubtitle.style.fontStyle = "italic";
+            document.body.appendChild(siteSubtitle)
+
+            // Make a button
+            var myButton = document.createElement("button");
+            myButton.appendChild(document.createTextNode("Press Me"));
+            document.body.appendChild(myButton);
+
+
+            var myList = document.createElement("ul");
+            document.body.appendChild(myList);
+            var listElement;
+
+            var quantity = prompt("How many elements do you want in the list?", "");
+            var i = parseInt(quantity);
+            if (!i) {
+                alert("That's not a number.")
+            } else {
+                if (i < 1) {
+                    alert("I need a number greater than zero! :'(")
+                } else {
+                    for (let index = 0; index < i; index++) {
+                        listElement = document.createElement("ul");
+                        listElement.appendChild(document.createTextNode(`Element ${index + 1}`));
+                        myList.appendChild(listElement)
+                    }
+                }
+            }
+
+
+        })()
+    </script>
+</body>
+
+</html>
+
 
 <!-- Now it's your turn to make some changes
     - Add at least 2 DOM elements, via code, DOH

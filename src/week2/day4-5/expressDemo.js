@@ -1,15 +1,34 @@
-const express = ;
+const express = require("express");
+const fs = require("fs");
 const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
     res.send('Hello There!');
-})
+});
+
+app.get('/random', (req, res) => {
+    res.send(`Random number: ${parseInt(Math.random() * 100)}`);
+});
+
+// Bonus
+
+app.get('/bonus', (req, res) => {
+    res.send("Welcome to the bonus route!");
+});
+
+app.get('/json', (req, res) => {
+
+    fs.readFile(__dirname + '/package.json', function (err, data) {
+        if (err) throw err;
+        res.send(data.toString());
+    });
+});
 
 app.listen(port, () => {
     console.log('Example server listening on port ' + port);
     console.log('Enter http://localhost:' + port + ' on your browser')
-})
+});
 
 // First things first, this won't work. It's your job to fix it
 // Just a clue, that variable called express is a module, so you need to bring it in.

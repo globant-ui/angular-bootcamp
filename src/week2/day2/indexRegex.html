@@ -1,10 +1,11 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
 <script>
-    (function(){
+    (function () {
         "use strict";
         // This will always pass
-        var emailRegex = new RegExp(),
+        let exp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var emailRegex = new RegExp(exp),
             result = prompt("Enter Your email", ""),
             valid = result.match(emailRegex);
 
@@ -14,6 +15,18 @@ inside developer tools -->
         } else {
             alert("Email not valid");
             console.warn(`You entered: ${result} which is not an email`);
+        }
+
+        // BONUS
+        let bonusExp = /^><\({4,}°>|<°\){4,}><$/;
+        var bonusRegex = new RegExp(bonusExp),
+            bonus = prompt("Draw a fish bigger than this: ><(((°>", ""),
+            validBonus = bonus.match(bonusRegex);
+
+        if (validBonus) {
+            alert("Good job!");
+        } else {
+            alert("That's not a bigger fish.");
         }
     })()
 </script>
