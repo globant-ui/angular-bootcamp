@@ -1,18 +1,59 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
+<!doctype html>
+<html class="no-js" lang="en">
+
+   <head>
+      <meta charset="utf-8">
+      <title> My page </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   </head>
+
+   <body>
+      <button> Button A </button>
+      <button> Button B </button>
+      <button> Button C </button>
+      <button class="button-catch"> TRY TO CATCH ME </button>
+
+   </body>
+
+   <script>
+      document.body.addEventListener("click", event => {
+         if (event.target.nodeName == "BUTTON") {
+            console.log("Clicked", event.target.textContent);
+         }
+      });
+
+      window.addEventListener("keydown", event => {
+         if (event.key == "b") {
+            document.body.style.background = "black";
+         }
+      });
+      window.addEventListener("keyup", event => {
+         if (event.key == "b") {
+            document.body.style.background = "";
+         }
+      });
+
+      let buttonsCatch = document.body.getElementsByClassName("button-catch")[0];
+      buttonsCatch.style.position = "absolute";
+      buttonsCatch.addEventListener("mouseover", event => {
+         buttonsCatch.style.top = '100px';
+         buttonsCatch.textContent = "ALMOST";
+      });
+
+
+   </script>
+
+</html>
 
 <!-- Now it's your turn to make some changes
-    - Draw some buttons, make your way between the click events and let me know they are pressed
-    - What other events are you familiar with? Show it
+- Draw some buttons, make your way between the click events and let me know they are pressed
+- What other events are you familiar with? Show it
 
-    ****************************************************
-    ****               BONUS POINTS                 ****
-    ****      keep me informed of the pointer's     ****
-    ****      position, make it show on screen      ****
-    ****************************************************
+****************************************************
+****               BONUS POINTS                 ****
+****      keep me informed of the pointer's     ****
+****      position, make it show on screen      ****
+****************************************************
 -->
