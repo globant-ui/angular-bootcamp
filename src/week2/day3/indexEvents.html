@@ -1,9 +1,56 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
+<button>Button 1</button>
+<button>Button 2</button>
+<button>Button 3</button>
+<h1>Clicked: <span id="clicked"></span></h1>
+<h1>I'm Pressing: <span id="pressing"></span></h1>
+<h1>I Release: <span id="release"></span></h1>
+<h1>I Double-Clicked: <span id="doubleClicked"></span></h1>
+<h1>Position X: <span id="posX"></span></h1>
+<h1>Position Y: <span id="posY"></span></h1>
+
 <script>
-    (function(){
+    (function () {
         "use strict";
+        var clicked = document.querySelector("#clicked");
+        var pressing = document.querySelector("#pressing");
+        var release = document.querySelector("#release");
+        var doubleClicked = document.querySelector("#doubleClicked");
+
+        document.body.addEventListener("click", event => {
+            if (event.target.nodeName == "BUTTON") {
+                clicked.textContent = event.target.textContent;
+            }
+        });
+        document.body.addEventListener("mousedown", event => {
+            if (event.target.nodeName == "BUTTON") {
+                pressing.textContent = event.target.textContent;
+            }
+        });
+        document.body.addEventListener("mouseup", event => {
+            if (event.target.nodeName == "BUTTON") {
+                release.textContent = event.target.textContent;
+            }
+        });
+
+        document.body.addEventListener("dblclick", event => {
+            if (event.target.nodeName == "BUTTON") {
+                doubleClicked.textContent = event.target.textContent;
+            }
+        });
+
+        window.addEventListener("mousemove", event => {
+            var positionX = event.clientX;
+            var positionY = event.clientY;
+            var x = document.querySelector("#posX");
+            var y = document.querySelector("#posY");
+            x.textContent = positionX;
+            y.textContent = positionY;
+        });
+
     })()
+
 </script>
 
 <!-- Now it's your turn to make some changes
