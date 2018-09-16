@@ -136,3 +136,27 @@ function stepRange(start, end, step) {
   }
   return toreturn;
 }
+//-------------------------------------
+
+function reverseArray(arr){
+var arreg=[];
+  for (var i =0; i< arr.length ;  i++) {
+       arreg[i]= arr[ arr.length-(i+1)];
+  }
+return arreg;
+}
+
+//--------------------------------------
+
+function reverseArrayInPlace(a){
+  var aux=[];
+    for (var i=a.length -1 ; i>= 0; i--){
+        aux[a.length-1-i]= a[i];
+    }
+    for (var i= 0; i<aux.length; i++){
+      a[i]= aux[i];}
+
+  return a;
+}
+
+ 
