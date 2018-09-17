@@ -1,0 +1,28 @@
+{
+    "menu": {
+        "id": "Daily menu",
+        "price": "$200",
+        "week": {
+            "monday": [
+                "Cheeseburger",
+                "Chicken Sandwich"
+            ],
+            "tuesday": [
+                "Turkey Sub",
+                "Mixed Veggies"
+            ],
+            "wednesday": [
+                "Boneless Sandwich",
+                "Spaghetti & Meat balls"
+            ],
+            "thursday": [
+                "Chinesse Food",
+                "Mac and Cheese"
+            ],
+            "friday": [
+                "Pizza",
+                "Chicken Sandwich"
+            ]
+        }
+    }
+}

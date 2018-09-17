@@ -2,14 +2,17 @@ const fs = require('fs');
 var fileName = "test.txt",
     content = "Hey There!";
 
-fs.writeFile(__dirname + "/" + fileName, content, function(err) {
-    if(err) {
-        return console.log(err)
-    }
-
-    console.log("The file was saved!");
+fs.access(fileName, fs.constants.F_OK, (err) => {
+    if(!err)
+    console.log(`ERROR: ${fileName} file exists `);
+    else 
+    fs.writeFile(__dirname + "/" + fileName, content, function (err) {
+        if (err) {
+            return console.log(err)
+        }
+        console.log(`${fileName} file was saved`);
+    });
 });
-
 // This is a node app, this code saves a file on the current path with
 // the content on the variable with that name.
 

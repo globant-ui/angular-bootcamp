@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+</head>
+
+<body style="text-align: center;">
+    <header>
+        <h1 id="title">
+        </h1>
+    </header>
+    <hr/>
+
+    <section>
+        <article>
+            <h3 id="price">
+            </h3>
+            <br/>
+            <div style="width:80%;align-content: center;">
+                <table id="table" class="table">
+                    <thead style="text-align: center;">
+                        <tr id="tr">
+                            <th>Monday</th>
+                            <th>Lastname</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tr id="option1">
+                        <td id="mon1"></td>
+                        <td id="tue1"></td>
+                        <td id="wed1"></td>
+                        <td id="thu1"></td>
+                        <td id="fri1"></td>
+                    </tr>
+                    <tr id="option2">
+                        <td id="mon2"></td>
+                        <td id="tue2"></td>
+                        <td id="wed2"></td>
+                        <td id="thu2"></td>
+                        <td id="fri2"></td>
+                    </tr>
+                </table>
+
+
+                <form>
+                    <div>
+                        <button class="btn btn-danger" href="/web">Back</button>
+
+                        <button class="btn btn-success" href="/">Home</button>
+
+                        <button class="btn btn-secondary" href="/json">JSON File Demo</button>
+
+                        <button class="btn btn-primary" href="/random">Random Num Demo</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </article>
+    </section>
+    <script type="text/javascript">
+        window.onload = () => {
+            var menu = "<%= menu %>";
+            let keys = "<%= keys %>";
+            document.getElementById("title").innerHTML = "<%= menu.id %>";
+            document.getElementById("price").innerHTML = "<%= menu.price %>";
+
+
+            document.getElementById("mon1").innerHTML = "<%= menu.week.monday[0] %>";
+            document.getElementById("mon2").innerHTML = "<%= menu.week.monday[1] %>";
+
+            document.getElementById("tue1").innerHTML = "<%= menu.week.tuesday[0] %>";
+            document.getElementById("tue2").innerHTML = "<%= menu.week.tuesday[1] %>";
+
+            document.getElementById("wed1").innerHTML = "<%= menu.week.wednesday[0] %>";
+            document.getElementById("wed2").innerHTML = "<%= menu.week.wednesday[1] %>";
+
+            document.getElementById("thu1").innerHTML = "<%= menu.week.thursday[0] %>";
+            document.getElementById("thu2").innerHTML = "<%= menu.week.thursday[1] %>";
+
+            document.getElementById("fri1").innerHTML = "<%= menu.week.friday[0] %>";
+            document.getElementById("fri2").innerHTML = "<%= menu.week.friday[1] %>";
+       
+        }
+    </script>
+</body>
+
+</html>
