@@ -4,9 +4,10 @@ inside developer tools -->
     (function(){
         "use strict";
         // This will always pass
-        var emailRegex = new RegExp(),
-            result = prompt("Enter Your email", ""),
-            valid = result.match(emailRegex);
+        var regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+        var emailRegex = new RegExp(regExp),
+        result = prompt("Enter Your email", ""),
+        valid = result.match(emailRegex);
 
         if (valid) {
             alert("Email valid");

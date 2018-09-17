@@ -2,12 +2,38 @@ const fs = require('fs');
 var fileName = "test.txt",
     content = "Hey There!";
 
-fs.writeFile(__dirname + "/" + fileName, content, function(err) {
-    if(err) {
-        return console.log(err)
+fs.access(__dirname + "/" + fileName, fs.constants.F_OK, (err) => {
+    if (err != null) {
+        fs.writeFile(__dirname + "/" + fileName, content, function (err) {
+            if (err) {
+                return console.log(err)
+            }
+    
+            console.log("The file was saved!");
+        });
+    } else {
+        console.log(`Sorry, ${fileName} already exists.`);
     }
+}); 
 
-    console.log("The file was saved!");
+
+// BONUS - WITH BUFFER
+
+var bufferFile = Buffer.from(fileName);
+var bufferContent = Buffer.from(content);
+
+fs.access(__dirname + "/" + bufferFile, fs.constants.F_OK, (err) => {
+    if (err != null) {
+        fs.writeFile(__dirname + "/" + bufferFile, bufferContent, function (err) {
+            if (err) {
+                return console.log(err)
+            }
+    
+            console.log("The file was saved!");
+        });
+    } else {
+        console.log(`Sorry, ${bufferFile} already exists.`);
+    }
 });
 
 // This is a node app, this code saves a file on the current path with

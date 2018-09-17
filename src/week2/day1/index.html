@@ -1,16 +1,98 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    var Animal = (function(type) {
+
+    // PROTOTYPE VERSION
+
+    function Animal(type, name, color) {
         this.type = type;
+        this.name = name;
+        this.color = color;
+    }
+
+    Object.defineProperty(Animal.prototype, 'tipo', {
+        get: function () {
+            return this.type;
+        },
+        set: function (value) {
+            this.type = value;
+        }
     });
 
-    Animal.prototype.talk = function() {
+    Animal.prototype.talk = function () {
         console.log(`Hi, I'm an Animal, but also a ${this.type}`);
     };
 
-    let rabbit = new Animal("Rabbit");
+    Animal.prototype.run = function () {
+        console.log(`${this.name} is running...`);
+    };
+
+    Animal.prototype.sleep = function () {
+        console.log(`${this.name} is going to sleep for 10 min.`);
+    };
+
+    function Dog(name, color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    Dog.prototype = Object.create(new Animal("Dog"));
+
+    Dog.prototype.sleep = function () {
+        console.log(`${this.name} is going to sleep for 30 min.`);
+    }
+
+
+    // ES6 VERSION
+
+    class Animal {
+        constructor(type, name, color) {
+            this.type = type;
+            this.name = name;
+            this.color = color;
+        }
+
+        get tipo() {
+            return this.type;
+        }
+
+        set tipo(newType) {
+            this.type = newType;
+        }
+
+        talk() {
+            console.log(`Hi, I'm an Animal, but also a ${this.type}`);
+        }
+
+        run() {
+            console.log(`${this.name} is running...`);
+        }
+
+        sleep() {
+            console.log(`${this.name} is going to sleep for 10 min.`);
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name, color) {
+            super("Dog", name, color);
+        }
+
+        sleep() {
+            console.log(`${this.name} is going to sleep for 30 min.`);
+        }
+    }
+
+    let rabbit = new Animal("Rabbit", "Pepe", "Black");
     rabbit.talk();
+    rabbit.run();
+    rabbit.sleep();
+
+    let dog = new Dog("Juan", "White");
+    dog.talk();
+    dog.run();
+    dog.sleep();
+
 </script>
 
 <!-- Now it's your turn to make some changes

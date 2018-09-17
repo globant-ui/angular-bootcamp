@@ -1,0 +1,91 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+header, 
+nav, 
+section, 
+article, 
+aside, 
+footer {
+    border-radius: 15px;
+    margin: 5px;
+}
+
+header {
+    background-color: #FF0000;
+    text-align: center;
+    height: 5em;
+}
+
+.main {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+nav {
+    background-color: #008000;
+    width: 25%;
+}
+
+section {
+    background-color: #808080;
+    width: 50%;
+}
+
+section > header {
+    background-color: #FFC0CB;
+    height: 3em;
+}
+
+section > article {
+    background-color: #FFE4C4;
+    height: 15em;
+}
+
+section > footer {
+    background-color: #00FFFF;
+    height: 3em;
+}
+
+aside {
+    background-color:#FFA500;
+    width: 25%;
+}
+
+footer {
+    background-color: #0000FF;
+    text-align: center;
+    height: 5em;
+}
+
+.header {
+    font-size: 46px;
+}
+
+.navigation {
+    font-size: 12px;
+}
+
+.sidebar {
+    font-size: 10px;
+}
+
+.footer {
+    font-size: 10px;
+}
+
+.content > * {
+    font-size: 14px;
+}
+
+[class$="r"] {
+    background-color: #FF00FF;
+}
+
+[class*="a"]:not([class$="r"]) {
+    background-color: #0000FF;
+}
