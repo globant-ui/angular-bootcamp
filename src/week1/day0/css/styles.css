@@ -1,0 +1,61 @@
+/* Accesibilidad al cambiar de campo para completar */
+input:focus{
+	background-color: #58ACFA;
+	color: #000000;
+	font-weight: bold;
+}
+
+body {
+
+	
+background-size: 100vw 100vh;
+font-family: arial;
+color: #fff;
+background-attachment: fixed;
+margin:0;}
+
+form {
+	width: 400px;
+	margin:auto;
+	padding: 10px 20px;
+	background: rgba(0,0,0,0.4);
+	box-sizing: border-box;
+	border-radius: 7px;
+}
+h1{
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+input, textarea{
+	width: 100%;
+	margin-bottom: 12px;
+
+}
+input[type="radio"],
+input[type="checkbox"]{
+  width: initial;
+}
+legend{
+
+font-size: 17px;
+font-weight:bold;
+
+}
+#submit, #reset{
+	background: #58ACFA;
+	color: #fff;
+	padding:6px;
+}
+input[type="submit"],
+input[type="reset"]{
+  width: initial;
+
+}
+
+@media (max-width: 480px){
+	form{
+		width: 100%;
+	}
+}
