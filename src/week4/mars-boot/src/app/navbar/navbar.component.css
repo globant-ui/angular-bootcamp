@@ -1,0 +1,33 @@
+@media (max-width: 450px) {
+    #nasaLogo {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    a.navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .nav-item > .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 330px) {
+    a.navbar-brand {
+        font-size: 1rem;
+    }
+
+    .nav-item > .nav-link {
+        font-size: .9rem;
+    }
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.nav-link {
+    font-size: 1.3rem;
+}
