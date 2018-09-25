@@ -1,0 +1,27 @@
+
+<h3> {{ rover.id}} {{ rover.name }} : {{actualCameraFullName}} </h3>
+<select (change)="getPhotosFromCamera($event.target.value)">
+   <option *ngFor="let camera of rover.cameras" value={{camera.name}} > 
+      {{ camera.name }}
+   </option>
+</select>
+
+<div *ngFor="let photo of photos">
+   <img src={{photo.img_src}}> 
+</div>
+
+<div *ngIf="!hasPhotos">
+   <p> No photos to show</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
