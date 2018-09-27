@@ -2,7 +2,7 @@
   <div class="container">
 
     <a class="navbar-brand" routerLink="/home">
-      <img id="nasaLogo" src="assets/nasa.svg" width="60" height="60" alt="NASA Logo">
+      <img id="nasaLogo" src="assets/nasa.svg" alt="NASA Logo">
       The Red Planet Rovers
     </a>
 
@@ -13,13 +13,14 @@
 
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/detail/1">Image of the Day <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/detail/image-of-the-day" routerLinkActive="active-link">Image of the Day <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home">Image Gallery</a>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Image Gallery</a>
         </li>
       </ul>
     </div>
+    
   </div>
 </nav>

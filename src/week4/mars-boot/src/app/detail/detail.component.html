@@ -1,3 +1,19 @@
-<p>
-  detail works!
-</p>
+<div *ngIf="error">
+    <div class="alert alert-danger text-center mt-3" role="alert">
+        {{ error}}
+    </div>
+</div>
+
+<div *ngIf="photo">
+
+    <h1 class="text-center title"> {{ title }} </h1>
+
+    <div class="card mx-auto">
+        <img class="card-img-top img-fluid" src="{{ photo.img_src }}" alt="{{ photo.rover.name }} photo">
+        <div class="card-body">
+            <h5 class="card-title text-right">{{ photo.rover.name }} {{ photo.camera.name }}</h5>
+            <p class="card-text"><small class="float-right">{{ photo.earth_date | date: 'longDate' }}</small></p>
+        </div>
+    </div>
+
+</div>

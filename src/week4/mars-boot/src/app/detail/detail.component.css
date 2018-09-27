@@ -1,0 +1,11 @@
+@media (max-width: 350px){
+    h1.title {
+        font-size: 2rem;
+    }
+}
+
+.card {
+    max-width: 30rem;
+    background-color: rgba(154, 154, 154, 0.3);
+    color: #000000;
+}

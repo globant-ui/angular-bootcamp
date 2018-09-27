@@ -7,7 +7,9 @@ import { DetailComponent } from './detail/detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'detail/:id', component: DetailComponent }
+  { path: 'detail/:route', component: DetailComponent},
+  { path: 'detail/:route/:rover/:camera/:id', component: DetailComponent},
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
