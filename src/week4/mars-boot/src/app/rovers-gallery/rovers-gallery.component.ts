@@ -10,16 +10,19 @@ import { Rover } from '../models/rover';
 })
 export class RoversGalleryComponent implements OnInit {
    rovers: Rover[];
+   error: any;
 
-   constructor(private photoService: MarsPhotosService) { }
+   constructor(private marsPhotosService: MarsPhotosService) { }
 
    ngOnInit() {
       this.getRovers();
    }
 
    getRovers(): void {
-      this.photoService.getRovers().subscribe(roversArray => this.rovers = roversArray['rovers']);
+      this.marsPhotosService.getRovers().subscribe(roversArray => {this.rovers = roversArray['rovers']}, error => this.error = error);
    }
+
+
 
 
 }

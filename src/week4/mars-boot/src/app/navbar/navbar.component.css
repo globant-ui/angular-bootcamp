@@ -1,7 +1,8 @@
-.portfolio-item {
-   margin-bottom: 30px;
+a:not([href]):not([tabindex]) {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.pagination {
-   margin-bottom: 30px;
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
 }

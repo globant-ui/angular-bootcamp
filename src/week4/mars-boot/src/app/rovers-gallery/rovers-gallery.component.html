@@ -1,3 +1,7 @@
-<div class="rover-container">
+<div class="all-rovers-container">
+   <header>
+      <h1> Rovers Gallery</h1>
+   </header>
    <app-rover *ngFor="let rover of rovers" [rover]="rover"></app-rover>
 </div>
+<p> {{ error }}</p>

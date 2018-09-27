@@ -1,0 +1,30 @@
+.rover-detail{
+   display: flex;
+   align-items: start;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.img-container{
+   border-style: ridge;
+   padding: 0.2rem;
+}
+
+img.camera-img.img-fluid {
+   width: 100%;   
+   padding-top: 0.5rem;
+}
+
+header.rover-detail{
+   margin: 0.5rem;
+}
+
+p.camera-img__date {
+   text-align: right;
+}
+
+p.no-photo{
+   color: #ff0000;
+}
+

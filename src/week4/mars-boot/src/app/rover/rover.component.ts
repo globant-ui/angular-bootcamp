@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MarsPhotosService } from '../services/mars-photos.service';
+import { PhotoService } from '../services/photo.service';
 
 import { Rover } from '../models/rover';
 import { Photo } from '../models/photo';
@@ -17,8 +18,9 @@ export class RoverComponent implements OnInit {
    hasPhotos: boolean;
    actualCameraFullName: string;
    actualCameraShortName: string;
+   error: any;
 
-   constructor(private photoService: MarsPhotosService) { 
+   constructor(private marsPhotosService: MarsPhotosService, private photoService: PhotoService) { 
    }
 
    ngOnInit() { 
@@ -28,16 +30,21 @@ export class RoverComponent implements OnInit {
    }
 
    getPhotosFromCamera(cameraName: string) {
-      this.photoService.getPhotosFromCamera(this.rover.name, cameraName, this.rover.max_sol).subscribe(photosArray => {
+      this.marsPhotosService.getPhotosFromCamera(this.rover.name, cameraName, this.rover.max_sol).subscribe(photosArray => {
          this.photos = photosArray['photos'].slice(0,4);
          this.hasPhotos = this.photos.length > 0 ? true : false;  
-      });
+      }, error => this.error = error);
+      
       for (let camera of this.rover.cameras) {
          if(camera.name === cameraName)
             this.actualCameraFullName = camera.full_name;
       }
 
    }  
+   
+   savePhotoForDetail(photo: Photo){
+      this.photoService.setPhoto(photo);
+   }
 
 
 }

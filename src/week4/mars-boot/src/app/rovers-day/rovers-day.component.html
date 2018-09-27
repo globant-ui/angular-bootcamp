@@ -1,4 +1,14 @@
-<h1> Image of the day </h1>
-<h2> {{ randomRover.name }}</h2>
-<h3> {{ randomCamera.name }} </h3>
-<img src="{{ randomImg }}">
+<header>
+   <h1> {{ title }} </h1>
+</header>
+<div class="image-detail" *ngIf="photo ; else noPhoto">
+   <img class="camera-img img-fluid" src="{{ photo.img_src }}">
+   <p class="rover-name"> {{ photo.rover.name }}</p>
+   <p class="camera-name"> {{ photo.camera.name }}</p>
+   <p class="photo-date"> {{ photo.earth_date | date: 'longDate'}}</p>
+</div>
+<ng-template #noPhoto>
+   <p class="no-photo"> No photo to show </p>
+</ng-template>
+<p> {{ error }}</p>
+

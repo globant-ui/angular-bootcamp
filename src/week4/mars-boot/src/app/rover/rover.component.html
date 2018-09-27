@@ -1,25 +1,25 @@
-
-<h3> {{ rover.id}} {{ rover.name }} : {{actualCameraFullName}} </h3>
-<select (change)="getPhotosFromCamera($event.target.value)">
-   <option *ngFor="let camera of rover.cameras" value={{camera.name}} > 
-      {{ camera.name }}
-   </option>
-</select>
-
-<div *ngFor="let photo of photos">
-   <img src={{photo.img_src}}> 
+<header class="rover-detail">        
+   <h3 class="rover-name"> {{ rover.name }} : {{actualCameraFullName}} </h3>
+   <select class = "camera-selector" (change)="getPhotosFromCamera($event.target.value)">
+      <option class = "camera-option" *ngFor="let camera of rover.cameras" value={{camera.name}} > 
+         {{ camera.name }}
+      </option>
+   </select>
+</header>
+<div class="row rover-photos">      
+   <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let photo of photos">        
+      <div class="img-container">
+         <a routerLink="/day/photo">
+            <img (click)="savePhotoForDetail(photo)" class="camera-img img-fluid" src={{photo.img_src}}> 
+         </a>    
+         <p class="camera-img__date"> {{ photo.earth_date | date: 'longDate'}} </p>
+      </div>
+   </div>
 </div>
-
 <div *ngIf="!hasPhotos">
-   <p> No photos to show</p>
+   <p class="no-photo"> No photos to show</p>
 </div>
-
-
-
-
-
-
-
+<p> {{ error }}</p>
 
 
 
