@@ -3,13 +3,13 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarToggle">
-    <a class="navbar-brand" href="#"><i class="fas fa-space-shuttle mr-2"></i>The Red Planet Rovers</a>
+    <a class="navbar-brand" href="#"><i class="fas fa-space-shuttle mr-2"></i>{{ title }}</a>
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <li class="nav-item active m-1">
-        <a class="nav-link btn btn-lg btn-danger" routerLink="view-photo/random">Image of the day</a>
+        <a class="nav-link btn btn-lg btn-danger" routerLink="view-photo/random">{{ iodLabel }}</a>
       </li>
       <li class="nav-item active m-1">
-        <a class="nav-link btn btn-lg btn-danger" routerLink="gallery">Image gallery</a>
+        <a class="nav-link btn btn-lg btn-danger" routerLink="gallery">{{ galleryLabel }}</a>
       </li>
     </ul>
   </div>
