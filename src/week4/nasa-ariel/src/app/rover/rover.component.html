@@ -1,0 +1,14 @@
+<div class="container d-block">
+  <div  class="gallery">
+    <h2 class="d-inline">{{rover_name}}</h2>
+    <form class="float-right d-inline" >
+      <select class="float-right" >
+        <option [ngValue]="value" *ngFor="let value of actual_rover.cameras">{{value}}</option>
+      </select>
+    </form>
+    <span class="d-block ">{{actual_camera}} </span>
+  </div>
+  <app-image [rover_name] ="rover_name"></app-image>
+</div>
+
+  

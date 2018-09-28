@@ -1,0 +1,16 @@
+<div class="row">
+  
+  <div *ngFor="let photo of photos_gallery" class="col-sm text-center">
+    <a href="{{ photo.img_src }}" >
+    <img class="img-thumbnail " src="{{ photo.img_src }}" alt="">
+  </a>
+    <span class="float-left text-left">
+      <span class="d-block">
+        Sol : {{photo.sol}}
+      </span>
+      <span class="d-block">
+        Earth Date : {{photo.earth_date}}
+      </span>
+    </span>
+  </div>
+</div>
