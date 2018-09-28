@@ -1,11 +1,93 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Events</title>
+</head>
+
+<body>
+    <button id="hello">Say "Hello!"</button>
+    <button id="name">Say "Hello!" with user's name</button>
+    <button id="doubleClk">Double-click me!</button>
+    <button id="ghost">I do nothing, but disappear on hover</button>
+    <ul>
+        <li>Clicked: <span id="clicked"></span></li>
+        <li>Double-clicked: <span id="dblclicked"></span></li>
+    </ul>
+
+    <h4>Mouse Position</h4>
+    X: <span id="posX"></span>
+    Y: <span id="posY"></span>
+
+    <script>
+        (function () {
+            "use strict";
+
+            // Buttons listeners
+
+            var helloButton = document.querySelector("#hello");
+            helloButton.addEventListener("click", event => {
+                alert("Hello, user!");
+            });
+
+            var helloNameButton = document.querySelector("#name");
+            helloNameButton.addEventListener("click", event => {
+                var name = prompt("What's your name?", "");
+                alert(`Hello, ${name}`);
+            });
+
+            var doubleClkButton = document.querySelector("#doubleClk");
+            doubleClkButton.addEventListener("dblclick", event => {
+                alert("Double clicked! 💪");
+            })
+
+            var ghostButton = document.querySelector("#ghost");
+            ghostButton.addEventListener("mouseenter", event => {
+                ghostButton.style.opacity = 0;
+            });
+            ghostButton.addEventListener("mouseleave", event => {
+                ghostButton.style.opacity = 1;
+            });
+
+            // Body listeners
+
+            document.body.addEventListener("click", event => {
+                if (event.target.nodeName == "BUTTON") {
+                    document.getElementById("clicked").textContent = event.target.textContent;
+                }
+            });
+            document.body.addEventListener("dblclick", event => {
+                if (event.target.nodeName == "BUTTON") {
+                    document.getElementById("dblclicked").textContent = event.target.textContent;
+                }
+            });
+
+            window.addEventListener("mousemove", event => {
+                var x = event.clientX;
+                var y = event.clientY;
+
+                var posX = document.querySelector("#posX");
+                var posY = document.querySelector("#posY");
+
+                posX.textContent = x;
+                posY.textContent = y;
+            });
+
+
+
+        })()
+    </script>
+
+</body>
+
+</html>
 <!-- Now it's your turn to make some changes
     - Draw some buttons, make your way between the click events and let me know they are pressed
     - What other events are you familiar with? Show it
