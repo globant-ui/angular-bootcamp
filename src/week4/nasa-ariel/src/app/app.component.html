@@ -1,0 +1,12 @@
+<!-- *ngFor="let rover_naof rovers_data" The content below is only a placeholder and can be replaced.-->
+<div class=" ">
+    <h1 class="d-inline-block">{{title}}</h1>
+    <nav class="float-right d-inline-block ">
+        <a class="btn btn-primary">Random Image</a>
+        <a class="btn btn-danger">Image Gallery</a>
+    </nav>
+</div>
+<div *ngFor="let rover of rover_names">
+    <app-rover [rover_name]="rover"></app-rover>
+</div>
+<app-footer></app-footer>
