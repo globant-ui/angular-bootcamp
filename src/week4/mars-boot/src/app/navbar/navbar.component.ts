@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  title: string;
+  homeTitle: string;
+  detailTitle: string;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.title = 'The Red Planet Rovers';
+    this.homeTitle = 'Image Gallery';
+    this.detailTitle = 'Image of the Day';
+  }
 
 }
