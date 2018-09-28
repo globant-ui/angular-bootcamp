@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <h4><span class="rover-name">{{ rover.name }}:</span> {{ selectedCamera.full_name }}</h4>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <div class="row">
+      <div class="col text-right my-auto">
+        <label>Camera:</label>
+      </div>
+      <div class="col">
+        <select class="form-control" name="" id="" [(ngModel)]="selectedCamera" (ngModelChange)="onChange($event)">
+          <option *ngFor="let camera of rover['cameras']" [ngValue]="camera">{{ camera.name }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-spinner *ngIf="showSpinner"></app-spinner>
+
+  <app-not-found-placeholder *ngIf="!(photos['photos'] == undefined) && photos['photos'].length ==  0"></app-not-found-placeholder>
+
+<div class="row mt-2 mb-4 justify-content-center">
+
+  <div *ngIf="photos != [] && !showSpinner">
+    <div class="row">
+      <div *ngFor="let photo of photos['photos']" class="col-md-2">
+        <app-photo-thumbnail [photo]="photo"></app-photo-thumbnail>
+      </div>
+    </div>
+  </div>
+</div>

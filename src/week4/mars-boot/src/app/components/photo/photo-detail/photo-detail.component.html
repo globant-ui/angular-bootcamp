@@ -1,0 +1,9 @@
+<div class="container d-flex justify-content-center">
+  <div *ngIf="photo">
+    <img src="{{photo.img_src}}" class="w-100" alt="{{ photo.rover.name }}: {{ photo.camera.name }}, {{ photo.earth_date }} ">
+    <div class="caption float-right text-right">
+      <p class="p-0 my-0">{{ photo.rover.name }}: {{ photo.camera.name }}</p>
+      <p class="p-0">{{ photo.earth_date }}</p>
+    </div>
+  </div>
+</div>
