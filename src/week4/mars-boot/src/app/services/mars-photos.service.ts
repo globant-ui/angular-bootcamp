@@ -42,7 +42,9 @@ export class MarsPhotosService {
    }
 
    private handleError(error: HttpErrorResponse) {
-      return throwError(error.message || 'Something bad happened; please try again later.');
+      //depending on the error, it would have to be handle
+      console.log(error.message);
+      return throwError('Something bad happened; please try again later.');
    }
 
 }

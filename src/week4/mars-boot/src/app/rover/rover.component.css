@@ -6,9 +6,19 @@
    justify-content: space-between;
 }
 
+select.camera-selector{
+   background-color: #4b4848;
+   color: white;
+   font-weight: bold;
+}
+
 .img-container{
    border-style: ridge;
    padding: 0.2rem;
+}
+
+img.camera-img img-fluid:hover{
+   opacity:0.7;
 }
 
 img.camera-img.img-fluid {
@@ -26,5 +36,13 @@ p.camera-img__date {
 
 p.no-photo{
    color: #ff0000;
+   font-size: 1.5rem;
+   font-family: monospace;
+}
+
+p.camera-img__date{
+   font-family: monospace;
+   font-weight: bold;
+   font-size: 1.4rem;
 }
 

@@ -1,7 +1,11 @@
 <div class="all-rovers-container">
    <header>
-      <h1> Rovers Gallery</h1>
+      <h1 class="main-title"> Rovers Gallery</h1>
    </header>
    <app-rover *ngFor="let rover of rovers" [rover]="rover"></app-rover>
 </div>
-<p> {{ error }}</p>
+<div *ngIf="error">
+   <p class="error-message">
+      There was a problem with rovers and cameras. Please, try again.
+   </p>
+</div>

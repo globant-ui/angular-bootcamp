@@ -1,8 +1,8 @@
 <header>
-   <h1> {{ title }} </h1>
+   <h1 class="main-title"> {{ title }} </h1>
 </header>
 <div class="image-detail" *ngIf="photo ; else noPhoto">
-   <img class="camera-img img-fluid" src="{{ photo.img_src }}">
+   <img class="camera-img img-fluid" src="{{ photo.img_src }}" alt="Image of the day">
    <p class="rover-name"> {{ photo.rover.name }}</p>
    <p class="camera-name"> {{ photo.camera.name }}</p>
    <p class="photo-date"> {{ photo.earth_date | date: 'longDate'}}</p>
@@ -10,5 +10,12 @@
 <ng-template #noPhoto>
    <p class="no-photo"> No photo to show </p>
 </ng-template>
-<p> {{ error }}</p>
+<div *ngIf="error">
+   <p class="error-message"></p>
+</div>
+<div *ngIf="error">
+   <p class="error-message">
+      There was a problem with the photo. Please, try again.
+   </p>
+</div>
 

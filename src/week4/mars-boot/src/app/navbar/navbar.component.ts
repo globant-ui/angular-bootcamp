@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
    styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-   title = "The Red Planet Rovers";
+   const title = "The Red Planet Rovers";
+   const galleryTitle = "Image Gallery";
+   const dayTitle = "Image of the Day";
+   
 
    constructor() { }
 

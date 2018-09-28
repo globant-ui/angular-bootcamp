@@ -3,6 +3,20 @@ a:not([href]):not([tabindex]) {
     text-decoration: none;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #ffffff;
+a.nav-link {
+    font-weight: bold;
+    margin-left: 0.5rem;
 }
+
+.navbar-dark .navbar-nav .nav-link{
+   color: #ffffff;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+   background-color: #ffffff;
+   color: #000000;
+   font-weight: bolder;
+}
+
+
+
+

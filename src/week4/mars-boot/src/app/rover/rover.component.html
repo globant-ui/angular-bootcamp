@@ -9,8 +9,8 @@
 <div class="row rover-photos">      
    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let photo of photos">        
       <div class="img-container">
-         <a routerLink="/day/photo">
-            <img (click)="savePhotoForDetail(photo)" class="camera-img img-fluid" src={{photo.img_src}}> 
+         <a routerLink="/day/{{ photo.id }}">
+            <img (click)="savePhotoForDetail(photo)" class="camera-img img-fluid" src={{photo.img_src}} alt="Rover's camera photo - Detail"> 
          </a>    
          <p class="camera-img__date"> {{ photo.earth_date | date: 'longDate'}} </p>
       </div>
@@ -19,7 +19,11 @@
 <div *ngIf="!hasPhotos">
    <p class="no-photo"> No photos to show</p>
 </div>
-<p> {{ error }}</p>
+<div *ngIf="error">
+   <p class="error-message">
+      There was a problem with this rover. Please, try again.
+   </p>
+</div>
 
 
 
