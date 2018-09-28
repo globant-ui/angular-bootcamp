@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from '../../../models/Photo';
 import { PhotosService } from '../../../services/photos.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-photo-detail',
@@ -11,8 +11,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PhotoDetailComponent implements OnInit {
   public photo: Photo;
 
-  constructor(private photoSvc: PhotosService, private router: Router, private route: ActivatedRoute
-  ) { }
+  constructor(
+    private photoSvc: PhotosService, 
+    private router: Router, 
+    private route: ActivatedRoute
+  ) {  }
+
+
 
   ngOnInit() {
     if (this.route.snapshot.paramMap.get('iod')) {

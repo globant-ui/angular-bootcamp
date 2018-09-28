@@ -14,16 +14,18 @@ const routes: Routes = [
   },
   {
     path: 'view-photo',
-    component: PhotoDetailComponent
+    component: PhotoDetailComponent,
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'view-photo/:iod',
-    component: PhotoDetailComponent
+    component: PhotoDetailComponent,
+    runGuardsAndResolvers: 'always'
   }
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule],
   declarations: []
 })
