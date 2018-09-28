@@ -1,0 +1,69 @@
+@media (max-width: 1010px) {
+    h1.rover-name {
+        display: block;
+    }
+
+    .btn-group.camerasButton {
+        display: block;
+        float: none;
+    }
+
+    .cameraFullName {
+        display: block;
+    }
+}
+
+@media (max-width: 430px) {
+    .rover-name {
+        font-size: 2rem;
+    }
+
+    small.cameraFullName {
+        font-size: 1.3rem;
+    }
+
+    h3.no-photos {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .rover-name {
+        font-size: 1.7rem;
+    }
+
+    small.cameraFullName {
+        font-size: 1.1rem;
+    }
+
+    h3.no-photos {
+        font-size: 1.3rem;
+    }
+}
+
+.rover-name {
+    display: inline;
+}
+
+.camerasButton {
+    float: right;
+}
+
+.no-photos {
+    font-style: italic;
+    color: #be0909;
+}
+
+.card {
+    background-color: rgba(154, 154, 154, 0.3);
+    color: #000000;
+}
+
+.btn, .dropdown-menu, .dropdown-item {
+    background-color: #1A5DAD;
+    color: #FFFFFF;
+}
+
+.cameraFullName {
+    font-size: 1.5rem;
+}

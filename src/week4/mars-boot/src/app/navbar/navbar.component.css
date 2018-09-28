@@ -1,0 +1,61 @@
+@media (max-width: 450px) {
+    .navbar-brand > #nasaLogo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+    a.navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav > .nav-item > .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 370px) {
+    a.navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-nav > .nav-item > .nav-link {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar-brand > #nasaLogo {
+        display: none;
+    }
+}
+
+#nasaLogo {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.nav-item > .nav-link {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    padding: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem; 
+    margin-right: 1rem;
+}
+
+.nav-item > .nav-link:hover {
+    color: rgba(255,255,255,.75);
+}
+
+.nav-item > .nav-link.active-link {
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}

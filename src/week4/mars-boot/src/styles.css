@@ -1,0 +1,5 @@
+@import './normalize.css';
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,9 +1,56 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
+<section id="mySection"></section>
+
 <script>
     (function(){
         "use strict";
+        var header1 = document.createElement("h1");
+        var text1 = document.createTextNode("Welcome to my Page");
+        header1.appendChild(text1);
+
+        var header5 = document.createElement("h5")
+        var text5 = document.createTextNode("Hi! How are you?");
+        header5.appendChild(text5);
+
+        var mySection = document.getElementById("mySection");
+
+        mySection.appendChild(header1);
+        mySection.appendChild(header5);
+
+        var mybutton = document.createElement("button");
+        var textButton = document.createTextNode("Click me!");
+        mybutton.appendChild(textButton);
+
+        mybutton.addEventListener("click", () => {
+            const maxNum = 100;
+            var value = prompt("How many elements?");
+            var number = Number(value);
+            if (!isNaN(number)) {
+                if (number <= maxNum) {
+                    addElements(number);
+                } else {
+                    alert("Sorry, maximum number is " + maxNum);
+                }
+            } else {
+                alert("Please, enter a number!");
+            }
+        });
+
+        mySection.appendChild(mybutton);
+
     })()
+
+    function addElements(number) {
+        var mySection = document.getElementById("mySection");
+        for (var counter = 0; counter < number; counter++) {
+            var newP = document.createElement("p");
+            var textP = document.createTextNode("I'm number " + counter);
+            newP.appendChild(textP);
+
+            mySection.appendChild(newP);
+        }
+    }
 </script>
 
 <!-- Now it's your turn to make some changes

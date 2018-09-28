@@ -1,4 +1,5 @@
-const express = ;
+const express = require('express');
+const fs = require('fs');
 const app = express();
 const port = 3000;
 
@@ -6,9 +7,37 @@ app.get('/', (req, res) => {
     res.send('Hello There!');
 })
 
+app.get('/random', (req, res) => {
+    const max = 100;
+    var number = Math.random() * max;
+    res.send("The random number is " + number);
+})
+
 app.listen(port, () => {
     console.log('Example server listening on port ' + port);
     console.log('Enter http://localhost:' + port + ' on your browser')
+})
+
+// BONUS
+
+app.get('/readJSON/:file', (req, res) => {
+    var fileName = req.params.file;
+    fs.readFile(__dirname + "/" + fileName, 'utf8', (err, data) => {
+        if (err) 
+            res.status(404).send("Sorry! I can't find " + fileName);
+        else
+            res.send("File content: " + JSON.stringify(data)); 
+    });
+})
+
+app.get('/sendJSON/:lastname/:name', (req, res) => {
+
+    var person = {
+        "lastname": req.params.lastname,
+        "name": req.params.name
+    }
+    
+    res.json(person);
 })
 
 // First things first, this won't work. It's your job to fix it

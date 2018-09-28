@@ -1,0 +1,11 @@
+<div *ngIf="error">
+    <div class="alert alert-danger text-center mt-3" role="alert">
+        {{ error}}
+    </div>
+</div>
+
+<div *ngIf="rovers">
+    <div *ngFor="let rover of rovers">
+        <app-rover-photos [rover]="rover"></app-rover-photos>
+    </div>
+</div>

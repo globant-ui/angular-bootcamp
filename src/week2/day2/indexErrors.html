@@ -1,10 +1,15 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    (function(){
+
+    class IndexError extends Error { }
+
+    class NullArray extends Error { }
+
+    (function () {
         "use strict";
         var willPass = "Hi there";
-        wontPass = "nope";
+        var wontPass = "nope";
 
         console.log(`willPass = ${willPass}`);
         console.log(`wontPass = ${wontPass}`);
@@ -12,11 +17,24 @@
         let someArr = [1, 2, 3, 4];
 
         function giveMe(inx) {
-            return someArr[counter];
+            if (inx < 0 || inx >= someArr.length)
+                throw new IndexError("Invalid index!");
+
+            return someArr[inx];
         }
 
-        for (let counter= 0; counter <= someArr.length; counter++) {
-            console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+        // Assertion
+        if (someArr == null)
+            throw new NullArray("Array is NULL!");
+
+        for (let counter = 0; counter < someArr.length; counter++) {
+            try {
+                console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+            } catch (e) {
+                if (e instanceof IndexError) {
+                    console.log(e.message);
+                }
+            }
         }
 
         console.log("The code continues");
