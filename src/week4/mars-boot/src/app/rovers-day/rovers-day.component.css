@@ -1,0 +1,27 @@
+.image-detail{
+   display: flex;
+   flex-direction: column;
+}
+
+img.camera-img.img-fluid {
+   width: 50%;   
+   padding-top: 0.5rem;
+   align-self: center;
+}
+
+p.no-photo{
+   color: #ff0000;
+   text-align: center;
+   font-size: 2rem;
+   font-family: monospace;
+   font-weight: 300;
+}
+
+p.rover-name, p.camera-name, p.photo-date{
+   align-self: center;
+   padding: 0rem;
+   margin: 0rem;
+   font-family: monospace;
+   font-weight: bold;
+   font-size: 1.8rem;
+}

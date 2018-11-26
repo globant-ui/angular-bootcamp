@@ -1,0 +1,31 @@
+<header class="rover-detail">        
+   <h3 class="rover-name"> {{ rover.name }} : {{actualCameraFullName}} </h3>
+   <select class = "camera-selector" (change)="getPhotosFromCamera($event.target.value)">
+      <option class = "camera-option" *ngFor="let camera of rover.cameras" value={{camera.name}} > 
+         {{ camera.name }}
+      </option>
+   </select>
+</header>
+<div class="row rover-photos">      
+   <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let photo of photos">        
+      <div class="img-container">
+         <a routerLink="/day/{{ photo.id }}">
+            <img (click)="savePhotoForDetail(photo)" class="camera-img img-fluid" src={{photo.img_src}} alt="Rover's camera photo - Detail"> 
+         </a>    
+         <p class="camera-img__date"> {{ photo.earth_date | date: 'longDate'}} </p>
+      </div>
+   </div>
+</div>
+<div *ngIf="!hasPhotos">
+   <p class="no-photo"> No photos to show</p>
+</div>
+<div *ngIf="error">
+   <p class="error-message">
+      There was a problem with this rover. Please, try again.
+   </p>
+</div>
+
+
+
+
+

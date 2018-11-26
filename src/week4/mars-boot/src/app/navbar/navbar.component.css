@@ -1,0 +1,22 @@
+a:not([href]):not([tabindex]) {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.nav-link {
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+   color: #ffffff;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+   background-color: #ffffff;
+   color: #000000;
+   font-weight: bolder;
+}
+
+
+
+

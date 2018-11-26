@@ -1,0 +1,48 @@
+.rover-detail{
+   display: flex;
+   align-items: start;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+select.camera-selector{
+   background-color: #4b4848;
+   color: white;
+   font-weight: bold;
+}
+
+.img-container{
+   border-style: ridge;
+   padding: 0.2rem;
+}
+
+img.camera-img img-fluid:hover{
+   opacity:0.7;
+}
+
+img.camera-img.img-fluid {
+   width: 100%;   
+   padding-top: 0.5rem;
+}
+
+header.rover-detail{
+   margin: 0.5rem;
+}
+
+p.camera-img__date {
+   text-align: right;
+}
+
+p.no-photo{
+   color: #ff0000;
+   font-size: 1.5rem;
+   font-family: monospace;
+}
+
+p.camera-img__date{
+   font-family: monospace;
+   font-weight: bold;
+   font-size: 1.4rem;
+}
+
