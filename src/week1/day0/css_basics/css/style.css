@@ -1,0 +1,57 @@
+header {
+  background-color: aqua;
+}
+
+footer {
+  background-color: burlywood;
+}
+
+aside {
+  background-color: cornflowerblue;
+}
+
+nav {
+  background-color: darkgrey;
+}
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.header {
+  font-size: 46px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+.sidebar {
+  font-size: 10px;
+}
+
+*[class$='r'] {
+  background-color: magenta;
+}
+
+*[class*='a']:not(*[class$='r']) {
+  background-color: blue;
+}
+
+.oh-no-inline-styles {
+  background-color: green !important;
+}
