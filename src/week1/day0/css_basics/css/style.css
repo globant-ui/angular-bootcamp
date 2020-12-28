@@ -26,6 +26,7 @@ footer {
 
 .header {
   font-size: 46px;
+  height: 50px;
 }
 
 .footer {
@@ -34,14 +35,22 @@ footer {
 
 .content {
   font-size: 14px;
+  margin-left: 400px;
+  margin-right: 400px;
 }
 
 .navigation {
   font-size: 12px;
+  position: absolute;
+  width: 400px;
 }
 
 .sidebar {
   font-size: 10px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 400px;
 }
 
 *[class$='r'] {
