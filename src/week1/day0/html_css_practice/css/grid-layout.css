@@ -1,0 +1,71 @@
+/* --- layout --- */
+/* based in http://adamkaplan.me/grid/ */
+
+/* small screen (default)*/
+html {
+  font-size: 100%;
+}
+
+/* medium screen (640px) */
+@media (min-width: 40rem) {
+  html {
+    font-size: 112%;
+  }
+}
+
+/* large screen (1024px) */
+@media (min-width: 64rem) {
+  html {
+    font-size: 120%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+  width: 90%;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.column {
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.column .full {
+  width: 100%;
+}
+
+.column .fourth {
+  width: 25%;
+}
+
+.column .tree-fourth {
+  width: 75%;
+}
+
+.column .third {
+  width: 33.3%;
+}
