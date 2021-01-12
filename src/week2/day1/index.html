@@ -1,16 +1,81 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    var Animal = (function(type) {
-        this.type = type;
-    });
 
-    Animal.prototype.talk = function() {
-        console.log(`Hi, I'm an Animal, but also a ${this.type}`);
-    };
+    class Animal {
+        constructor(type, color, nombre) {
+            this.type = type;
+            this.color = color;
+            this.nombre = nombre;
+        }
 
-    let rabbit = new Animal("Rabbit");
-    rabbit.talk();
+        get talk() {
+            if (this.color != 'No info' || this.nombre != 'No info')
+                console.log(`Hola, soy un ${this.color} ${this.type} de nombre ${this.nombre} `);
+
+            else
+                console.log(`Hola, soy animal, pero tambien un ${this.type} `)
+        }
+
+        set setType(type) {
+            this.type = type;
+        }
+
+        set setEdad(edad) {
+            this.edad = edad == 0 ? Math.floor((Math.random() * 20) + 1) : edad;
+        }
+
+        get getEdad() {
+            return this.edad;
+        }
+
+        get isMayor() {
+            if (this.edad > 12) {
+                console.log(`Soy mayor a ${this.type}`)
+
+            } else if (this.edad < 4) {
+                console.log(`Soy menor ${this.type} `);
+            } else {
+                console.log(`Tengo una edad de ${this.edad} ${this.type}`)
+            }
+        }
+
+    }
+
+    class Cat extends Animal {
+        constructor(nombre, genero) {
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        set setRaza(raza) {
+            this.raza = this.raza;
+        }
+
+        get talk(){
+            if ( typeof this.raza == undefined)
+            console.log(`Hola, soy un animal pero tambien un ${this.type}`)
+
+            else 
+            console.log(`Hola, soy un animal de raza ${this.raza} ${this.type}`);
+        }
+
+    }
+
+    let rabbit = new Animal("Conejo","Gris","Carlos");
+    rabbit.talk;
+    rabbit.setType='Big Rabbit';
+    rabbit.talk;
+    rabbit.setEdad=0;
+    console.log("Edad : " ,rabbit.getEdad);
+
+    let cat = new Cat();
+    cat.talk;
+    cat.setRaza = 'Siames';
+    cat.talk;
+    console.log(``);
+
+
 </script>
 
 <!-- Now it's your turn to make some changes

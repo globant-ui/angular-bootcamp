@@ -1,0 +1,12 @@
+@media (min-width: 40rem) {
+    html {
+      font-size: 112%;
+    }
+  }
+  
+  /* large screen (1024px) */
+  @media (min-width: 64rem) {
+    html {
+      font-size: 120%;
+    }
+  }

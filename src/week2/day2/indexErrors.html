@@ -4,7 +4,7 @@
     (function(){
         "use strict";
         var willPass = "Hi there";
-        wontPass = "nope";
+        var wontPass = "nope";
 
         console.log(`willPass = ${willPass}`);
         console.log(`wontPass = ${wontPass}`);
@@ -12,7 +12,7 @@
         let someArr = [1, 2, 3, 4];
 
         function giveMe(inx) {
-            return someArr[counter];
+            return someArr[inx];
         }
 
         for (let counter= 0; counter <= someArr.length; counter++) {

@@ -1,10 +1,39 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
+
+<html style="text-align: center;">
+
+<button onclick="actionOne()">One</button>
+
+<button onclick="actionTwo()" style="margin-top: 2%;">Two</button>
+
+<p id="labelClick">Da click aqui</p>
+
+</html>
+
 <script>
-    (function(){
-        "use strict";
-    })()
+
+    document.getElementById('labelClick').addEventListener('click', clickMe);
+
+    function actionOne() {
+        console.log('primer button')
+        alert('Preciono primer boton')
+    }
+
+    function actionTwo() {
+        console.log('segundo button')
+        alert('Preciono segundo boton')
+    }
+
+    function clickMe() {
+        console.log('Click Me')
+        document.getElementById('labelClick').innerHTML = 'Bien echo, dio click !! ';
+    }
+
 </script>
+
+
+
 
 <!-- Now it's your turn to make some changes
     - Draw some buttons, make your way between the click events and let me know they are pressed
