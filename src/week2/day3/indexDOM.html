@@ -1,10 +1,30 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    (function(){
-        "use strict";
-    })()
+
+    var valores = []
+
+    function addValue() {
+        var newValue = document.getElementById('inputValue').value;
+        valores.push(newValue);
+
+        console.log(valores)
+        document.getElementById('resultValues').innerHTML = valores
+
+    }
 </script>
+
+<button type="button" onclick="addValue()"> Add value </button>
+<br>
+<br>
+
+<input type="text" id="inputValue">
+
+<br>
+<br>
+
+<label> value: </label>
+<label id="resultValues"></label>
 
 <!-- Now it's your turn to make some changes
     - Add at least 2 DOM elements, via code, DOH
