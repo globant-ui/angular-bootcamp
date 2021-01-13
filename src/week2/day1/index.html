@@ -18,22 +18,22 @@
       this.color = color;
     }
 
-    get talk() {
+    talk() {
       console.log(`Hi, I'm an Animal, but also a ${this.color} ${this.type}`);
     }
 
-    get move() {
+    move() {
       console.log(`The ${this.type} is moving`);
     }
 
-    get eat() {
+    eat() {
       console.log(`The ${this.type} is eating ${this.feeding}`);
     }
   }
   let rabbit = new Animal('fish', 'plangton', 'grey');
-  rabbit.talk;
-  rabbit.move;
-  rabbit.eat;
+  rabbit.talk();
+  rabbit.move();
+  rabbit.eat();
 
   class Feline extends Animal {
     constructor(type, feeding, color, displacement) {
@@ -41,15 +41,15 @@
       this.displacement = displacement;
     }
 
-    get move() {
+    move() {
       console.log(`The ${this.type} is ${this.displacement}`);
     }
   }
 
   let cat = new Feline('cat', 'meet', 'white', 'running');
-  cat.talk;
-  cat.move;
-  cat.eat;
+  cat.talk();
+  cat.move();
+  cat.eat();
 </script>
 
 <!-- Now it's your turn to make some changes
