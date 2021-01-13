@@ -1,26 +1,27 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
 <script>
-    (function(){
-        "use strict";
-        var willPass = "Hi there";
-        wontPass = "nope";
+  (function () {
+    'use strict';
+    var willPass = 'Hi there';
+    let wontPass = 'nope'; // need declaration
 
-        console.log(`willPass = ${willPass}`);
-        console.log(`wontPass = ${wontPass}`);
+    console.log(`willPass = ${willPass}`);
+    console.log(`wontPass = ${wontPass}`);
 
-        let someArr = [1, 2, 3, 4];
+    let someArr = [1, 2, 3, 4];
 
-        function giveMe(inx) {
-            return someArr[counter];
-        }
+    function giveMe(inx) {
+      return someArr[inx]; // use inx no counter
+    }
 
-        for (let counter= 0; counter <= someArr.length; counter++) {
-            console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
-        }
+    // someArr.length - 1 -> array index begin in 0, for 4 elements, ends in index 3
+    for (let counter = 0; counter <= someArr.length - 1; counter++) {
+      console.log(`Index = ${counter}, value = ${giveMe(counter)}`);
+    }
 
-        console.log("The code continues");
-    })()
+    console.log('The code continues');
+  })();
 </script>
 
 <!-- Now it's your turn to make some changes
