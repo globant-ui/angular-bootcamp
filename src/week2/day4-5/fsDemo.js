@@ -2,12 +2,24 @@ const fs = require('fs');
 var fileName = "test.txt",
     content = "Hey There!";
 
-fs.writeFile(__dirname + "/" + fileName, content, function(err) {
-    if(err) {
-        return console.log(err)
-    }
+// fs.writeFile(__dirname + "/" + fileName, content, function(err) {
+//     if(err) {
+//         return console.log(err)
+//     }
+//     console.log("The file was saved!");
+// });
 
-    console.log("The file was saved!");
+fs.open(__dirname + "/" + fileName, 'r', function(err, f) {
+    if(!err) {
+        console.log("file found");
+    } else {
+        fs.writeFile(__dirname + "/" + fileName, content, function(err) {
+            if(err) {
+                return console.log(err)
+            }
+            console.log("The file was saved!");
+        });
+    }
 });
 
 // This is a node app, this code saves a file on the current path with
