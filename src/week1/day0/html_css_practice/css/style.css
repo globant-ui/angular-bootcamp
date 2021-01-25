@@ -1,0 +1,15 @@
+.description_wrap {
+  visibility: hidden;
+}
+
+.img_wrap:hover .description_wrap {
+  visibility: visible;
+}
+
+.description_wrap img {
+  opacity: 26%;
+}
+
+.description {
+  position: absolute;
+}

@@ -1,21 +1,21 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
 <script>
-    (function(){
-        "use strict";
-        // This will always pass
-        var emailRegex = new RegExp(),
-            result = prompt("Enter Your email", ""),
-            valid = result.match(emailRegex);
+  (function () {
+    'use strict';
+    // This will always pass
+    var emailRegex = new RegExp('[A-Za-z0-9.-]+@[A-Za-z0-9]+.[A-Za-z]{3}'),
+      result = prompt('Enter Your email', ''),
+      valid = result.match(emailRegex);
 
-        if (valid) {
-            alert("Email valid");
-            console.log(`You entered: ${result}`);
-        } else {
-            alert("Email not valid");
-            console.warn(`You entered: ${result} which is not an email`);
-        }
-    })()
+    if (valid) {
+      alert('Email valid');
+      console.log(`You entered: ${result}`);
+    } else {
+      alert('Email not valid');
+      console.warn(`You entered: ${result} which is not an email`);
+    }
+  })();
 </script>
 
 <!-- Now it's your turn to make some changes

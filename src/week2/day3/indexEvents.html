@@ -1,10 +1,5 @@
 <!-- Take this file and open it on a browser, then open the console
 inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
 
 <!-- Now it's your turn to make some changes
     - Draw some buttons, make your way between the click events and let me know they are pressed
@@ -16,3 +11,31 @@ inside developer tools -->
     ****      position, make it show on screen      ****
     ****************************************************
 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="click">Click me!</button>
+    <button id="dblClick">Do a double Click on me!</button>
+    <button id="mOver">Pass me the mouse pointer</button>
+  </body>
+
+  <script>
+    (function () {
+      'use strict';
+      document.getElementById('click').addEventListener('click', (event) => {
+        alert('You did a click');
+      });
+      document.getElementById('dblClick').addEventListener('dblclick', (event) => {
+        alert('You did a double click');
+      });
+      document.getElementById('mOver').addEventListener('mouseover', (event) => {
+        alert('the mouse is over the button');
+      });
+    })();
+  </script>
+</html>

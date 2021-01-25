@@ -1,10 +1,18 @@
-const express = ;
+// import {router} from "./randomRoute/randomRoute";
+
+const express = require("express");
 const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
     res.send('Hello There!');
 })
+
+app.get('/random', (req, res) => {
+    res.send("<p>" + Math.floor(Math.random()*101) + "</p>");
+})
+
+// app.use(router);
 
 app.listen(port, () => {
     console.log('Example server listening on port ' + port);

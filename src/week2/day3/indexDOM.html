@@ -1,10 +1,5 @@
 <!-- Take this file and open it on a browser, then open the console
     inside developer tools -->
-<script>
-    (function(){
-        "use strict";
-    })()
-</script>
 
 <!-- Now it's your turn to make some changes
     - Add at least 2 DOM elements, via code, DOH
@@ -16,3 +11,46 @@
     ****      show me you can dominate the DOM      ****
     ****************************************************
 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating elements</title>
+  </head>
+  <body>
+    <div id="form-container">
+      <form id="form" action="#">
+        <p>
+          <label for="numberElemnts">Number of elements?</label>
+          <input type="number" name="numberElemnts" id="numberElemnts" />
+        </p>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <div id="content"></div>
+  </body>
+
+  <script>
+    (function () {
+      'use strict';
+      let form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+        let inputValue = document.getElementById('numberElemnts').value;
+        let container = document.getElementById('content');
+
+        if (container.childNodes.length > 0) {
+          container.innerHTML = '';
+        }
+
+        for (let index = 1; index <= inputValue; index++) {
+          let element = document.createElement('p');
+          element.appendChild(document.createTextNode('element ' + index));
+          container.appendChild(element);
+        }
+
+        document.getElementById('numberElemnts').value = '';
+      });
+    })();
+  </script>
+</html>
