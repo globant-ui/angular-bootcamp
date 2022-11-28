@@ -1,3 +1,21 @@
-.pepe {
-    background-color: antiquewhite;
+header {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+footer {
+  background-color: beige;
+  text-align: center;
+}
+
+aside {
+  background-color: burlywood;
+}
+
+nav {
+  background-color: cornsilk;
+}
+
+html {
+  font-family: 14px;
 }
