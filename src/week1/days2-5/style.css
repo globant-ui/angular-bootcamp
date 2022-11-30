@@ -1,21 +1,47 @@
-header {
-  background-color: antiquewhite;
-  text-align: center;
-}
-
-footer {
-  background-color: beige;
-  text-align: center;
-}
-
-aside {
-  background-color: burlywood;
-}
-
-nav {
-  background-color: cornsilk;
-}
-
 html {
   font-family: 14px;
+}
+
+header.header {
+  display: block;
+  padding: 10px;
+  height: 20px;
+  background-color: magenta;
+  text-align: center;
+  font-weight: 46px;
+}
+
+nav.navigation {
+  display: inline-block;
+  height: calc(100vh - 200px);
+  width: 200px;
+  padding: 10px;
+  background-color: blue;
+  font-weight: 12px;
+}
+
+section.content {
+  display: inline-block;
+  height: calc(100vh - 200px);
+  width: 400px;
+  padding: 10px;
+  background-color: chartreuse;
+  font-weight: 14px;
+}
+
+aside.sidebar {
+  display: inline-block;
+  height: calc(100vh - 200px);
+  width: 200px;
+  padding: 10px;
+  background-color: burlywood;
+  font-weight: 10px;
+}
+
+footer.footer {
+  padding: 10px;
+  height: 300px;
+  background-color: magenta;
+  text-align: center;
+  font-weight: 10px;
 }
