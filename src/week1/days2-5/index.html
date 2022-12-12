@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>layout page test</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,37 +17,118 @@
 
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="mobile.css"
+      media="screen and (max-width: 640px)"
+    />
 
-    <link rel="manifest" href="site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="tablet.css"
+      media="screen and (min-width: 640px) and (max-width: 1280px)"
+    />
+
+    <link
+      rel="stylesheet"
+      href="desktop.css"
+      media="screen and (min-width: 1280px)"
+    />
+
+    <!-- <link rel="manifest" href="site.webmanifest" /> -->
     <meta name="theme-color" content="#fafafa" />
   </head>
 
   <body>
     <!-- Add your site or application content here -->
 
-    <header class="header">Site Header</header>
+    <header class="header">
+      <h1>Mi fantastico layout</h1>
+      <button type="menu" id="menu-btn">|||</button>
+    </header>
 
-    
-      <nav class="navigation">Site naviganion</nav>
+    <div class="main-column">
+      <nav id="navigation-menu" class="navigation hidden">
+        Main menu
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="/sign-out">Sign out</a></li>
+        </ul>
+      </nav>
+
       <section class="content">
-        content
-        <!-- <header> Section header</header>
+        <h2>Section title</h2>
         <article>
-          En gramática, un artículo es una clase de palabra que acompaña al
-          sustantivo dentro de una oración. Artículo y sustantivo se expresan en
-          igual género (masculino o femenino) y número (singular o plural), y la
-          función del artículo es especificar si el sustantivo es conocido
-          (definido) o desconocido (indefinido). Fuente:
-          https://concepto.de/articulo/#ixzz7lwuyLskp
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
+            lorem enim. Nulla mattis aliquam est, ut lobortis libero molestie
+            vel. Morbi eu urna quis nisi tincidunt volutpat vel sed arcu. Fusce
+            nibh dolor, malesuada nec luctus ac, lacinia tempus ex. Nullam
+            vestibulum volutpat lorem vel lobortis. Nunc congue mollis erat, nec
+            placerat nibh pulvinar ultrices. Vestibulum nisi lacus, tincidunt ut
+            elit non, eleifend ornare ligula. Fusce dignissim mauris id tellus
+            auctor, ac hendrerit turpis condimentum. Nulla tellus metus, cursus
+            ut finibus sit amet, aliquam ac ante. Proin fermentum felis et risus
+            molestie, feugiat faucibus ligula condimentum. Sed cursus purus
+            vulputate neque faucibus, ac semper velit bibendum. Duis nec mauris
+            laoreet nibh consequat maximus non at sapien. Ut sed pretium quam.
+            Fusce lacinia urna eget orci suscipit, id rhoncus elit pellentesque.
+            Vivamus quis eros in sem suscipit porta. Aliquam sit amet ex
+            pretium, interdum ipsum in, volutpat tortor.
+          </p>
+          <p>
+            Curabitur a augue dictum, consequat elit sit amet, scelerisque nisi.
+            Nullam tellus felis, sollicitudin a purus in, tristique ultricies
+            enim. Quisque sed tortor vel nulla vestibulum tristique sed eu nunc.
+            Phasellus ac magna nisl. Mauris non mi tristique, blandit risus a,
+            tempus velit. Aliquam porttitor posuere elementum. In imperdiet
+            mattis massa, ac egestas quam pretium nec. Suspendisse potenti.
+            Fusce eu dolor ex. Duis vitae elit scelerisque, malesuada mi at,
+            egestas enim. Suspendisse potenti. In pellentesque condimentum
+            euismod. In hac habitasse platea dictumst.
+          </p>
         </article>
-        <footer>Section footer</footer> -->
+        <footer>Section footer</footer>
       </section>
-      <aside class="sidebar">Aside panel</aside>
-    
 
-    <footer class="footer">footer</footer>
+      <aside class="sidebar">
+        Aside panel
+        <ul>
+          <li><a href="/threads">Read this thread</a></li>
+          <li><a href="/stock">View your stock actions</a></li>
+          <li><a href="/timer">Set a timer</a></li>
+          <li><a href="/todo">Check the TODOs</a></li>
+        </ul>
+      </aside>
+    </div>
 
-    <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-    <script src="js/app.js"></script>
+    <footer class="footer">
+      Seguinos en:
+      <ul>
+        <li><a href="wwww.facebook.com/mysite">Facebook</a></li>
+        <li><a href="wwww.instagram.com/mysite">Instagram</a></li>
+        <li><a href="wwww.twitter.com/mysite">Twitter</a></li>
+        <li><a href="mailto:mysite@gmail.com">Send us an email</a></li>
+      </ul>
+    </footer>
+
+    <!-- <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
+
+    <script>
+      const menuButton = document.querySelector("#menu-btn");
+
+      menuButton.addEventListener("click", (event) => {
+        const navigationMenu = document.querySelector("#navigation-menu");
+
+        if (navigationMenu.classList.contains("hidden")) {
+          navigationMenu.classList.remove("hidden");
+        } else {
+          navigationMenu.classList.add("hidden");
+        }
+      });
+    </script>
   </body>
 </html>
